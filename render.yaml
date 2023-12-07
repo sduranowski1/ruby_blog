@@ -1,7 +1,7 @@
 databases:
   - name: roncee
     databaseName: roncee
-    user: roncee
+    user: render
 
 services:
   - type: web
