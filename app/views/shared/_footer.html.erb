@@ -5,7 +5,8 @@
             <div class="col-xl-3 col-lg-4 col-sm-6">
                 <div class="footer-widget widget-about wow fadeInUp delay-0-2s">
                     <div class="footer-logo mb-15">
-                        <a href="index.html"><img src="app/assets/images/logos/logo.png" alt="Logo"></a>
+                        <a href="index.html"><%= image_tag("logos/logo.png", :alt => "Logo") %></a>
+                        <!-- <a href="index.html"><img src="app/assets/images/logos/logo.png" alt="Logo"></a> -->
                     </div>
                     <p>Bjørn is an award UI/UX designs and branding agency based in New York, USA.</p>
                     <div class="social-style-one mt-15">
@@ -61,31 +62,42 @@
 </div>
 <!--End pagewrapper-->
 
-
 <!-- Jquery -->
-<script src="app/assets/js/jquery-3.6.0.min.js"></script>
+<%= javascript_include_tag "/javascript/query-3.6.0.min" %>
+
 <!-- Bootstrap -->
-<script src="app/assets/js/bootstrap.min.js"></script>
+<%= javascript_include_tag "/javascript/bootstrap.min" %>
+
 <!-- Appear Js -->
-<script src="app/assets/js/appear.min.js"></script>
+<%= javascript_include_tag "/javascript/appear.min" %>
+
 <!-- Slick -->
-<script src="app/assets/js/slick.min.js"></script>
+<%= javascript_include_tag "/javascript/slick.min.js" %>
+
 <!-- Magnific Popup -->
-<script src="app/assets/js/jquery.magnific-popup.min.js"></script>
+<%= javascript_include_tag "/javascript/jquery.magnific-popup.min" %>
+
 <!-- Nice Select -->
-<script src="app/assets/js/jquery.nice-select.min.js"></script>
+<%= javascript_include_tag "/javascript/jquery.nice-select.min" %>
+
 <!-- Image Loader -->
-<script src="app/assets/js/imagesloaded.pkgd.min.js"></script>
+<%= javascript_include_tag "/javascript/imagesloaded.pkgd.min" %>
+
 <!-- Circle Progress -->
-<script src="app/assets/js/circle-progress.min.js"></script>
+<%= javascript_include_tag "/javascript/circle-progress.min" %>
+
 <!-- Skillbar -->
-<script src="app/assets/js/skill.bars.jquery.min.js"></script>
+<%= javascript_include_tag "/javascript/skill.bars.jquery.min" %>
+
 <!-- Isotope -->
-<script src="app/assets/js/isotope.pkgd.min.js"></script>
+<%= javascript_include_tag "/javascript/isotope.pkgd.min" %>
+
 <!--  WOW Animation -->
-<script src="app/assets/js/wow.min.js"></script>
+<%= javascript_include_tag "/javascript/wow.min" %>
+
 <!-- Custom script -->
-<script src="app/assets/js/script.js"></script>
+<%= javascript_include_tag "/javascript/script" %>
+
 
 </body>
 </html>

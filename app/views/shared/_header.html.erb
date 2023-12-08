@@ -14,23 +14,29 @@
         <link rel="shortcut icon" href="assets/images/logos/favicon.png" type="image/x-icon">
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <%= stylesheet_link_tag('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap') %>
+        
+        <%= stylesheet_link_tag('https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css') %>
         
         <!-- Flaticon -->
-        <link rel="stylesheet" href="app/assets/stylesheets/flaticon.min.css">
+        <%= stylesheet_link_tag('flaticon.min') %>
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="app/assets/stylesheets/fontawesome-5.14.0.min.css">
+        <%= stylesheet_link_tag('fontawesome-5.14.0.min') %>
         <!-- Bootstrap -->
-        <link rel="stylesheet" href="app/assets/stylesheets/bootstrap.min.css">
+        <%= stylesheet_link_tag('bootstrap.min') %>
         <!-- Magnific Popup -->
-        <link rel="stylesheet" href="app/assets/stylesheets/magnific-popup.min.css">
+        <%= stylesheet_link_tag('magnific-popup.min') %>
         <!-- Nice Select -->
-        <link rel="stylesheet" href="app/assets/stylesheets/nice-select.min.css">
+        <%= stylesheet_link_tag('nice-select.min') %>
         <!-- Animate -->
-        <link rel="stylesheet" href="app/assets/stylesheets/animate.min.css">
+        <%= stylesheet_link_tag('animate.min') %>
         <!-- Slick -->
-        <link rel="stylesheet" href="app/assets/stylesheets/slick.min.css">
-        <!-- Main Style -->
-        <link rel="stylesheet" href="app/assets/stylesheets/style.css">
+        <%= stylesheet_link_tag('slick.min') %>
+        <!-- Main -->
+        <%= stylesheet_link_tag('styles') %>
+
+    
+        
         
     </head>
     <body class="home-one">
@@ -47,8 +53,8 @@
 
                         <div class="header-inner rpy-10 rel d-flex align-items-center">
                             <div class="logo-outer">
-                                <div class="logo"><a href="index.html"><%= image_tag("logos/logo.png", :alt => "Logo" :title => "Logo") %></a></div>
-                                # <div class="logo"><a href="index.html"><img src="app/assets/images/logos/logo.png" alt="Logo" title="Logo"></a></div>
+                                <div class="logo"><a href="index.html"><%= image_tag("logos/logo.png", :alt => "Logo") %></a></div>
+                                <!-- <div class="logo"><a href="index.html"><img src="app/assets/images/logos/logo.png" alt="Logo" title="Logo"></a></div> -->
                             </div>
 
                             <div class="nav-outer ms-lg-auto clearfix">
@@ -57,7 +63,7 @@
                                     <div class="navbar-header">
                                     <div class="mobile-logo">
                                         <a href="index.html">
-                                                <img src="app/assets/images/logos/logo.png" alt="Logo" title="Logo">
+                                                <%= image_tag("logos/logo.png", :alt => "Logo") %>
                                         </a>
                                     </div>
                                     
@@ -134,7 +140,7 @@
                                 
                                 <!-- menu sidbar -->
                                 <div class="menu-sidebar">
-                                    <button><img src="app/assets/images/icons/toggler.svg" alt="Toggler"></button>
+                                    <button><%= image_tag("icons/toggler.svg", :alt => "Toggler") %></button>
                                 </div>
                                 <a href="contact.html" class="theme-btn">let,s talk</a>
                             </div>
