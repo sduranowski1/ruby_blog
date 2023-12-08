@@ -2,7 +2,4 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
-//= require_tree appear.min
-//= require_tree bootstrap.min
-//= require_tree circle-progress.min
-//= require_tree imagesloaded.pkgd.min
+//= require_tree .
