@@ -1,0 +1,205 @@
+<h1>Contact#index</h1>
+<p>Find me in app/views/contact/index.html.erb</p>
+<% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>">
+      <%= value %>
+    </div>
+  <% end %>
+<!--Form Back Drop-->
+        <div class="form-back-drop"></div>
+        
+        <!-- Hidden Sidebar -->
+        <section class="hidden-bar">
+            <div class="inner-box text-center">
+                <div class="cross-icon"><span class="fa fa-times"></span></div>
+                <div class="title">
+                    <h4>Get Appointment</h4>
+                </div>
+
+            
+                <!--Appointment Form-->
+                <div class="appointment-form">
+                    <%= form_with scope: :contact_form, url: contact_form_index_path, method: :post, local: true, class: "container" do |form| %>
+                        <div class="form-group">
+                            <%= form.label :name %>
+                            <%= form.text_field :name, class: "form-control" %>
+                        </div>
+                        <div class="form-group">
+                            <%= form.label :last_name %>
+                            <%= form.text_field :last_name, class: "form-control" %>
+                        </div>
+                        <div class="form-group">
+                            <%= form.label :email %>
+                            <%= form.email_field :email, class: "form-control" %>
+                        </div>
+                        <div class="form-group">
+                            <%= form.label :message %>
+                            <%= form.text_area :message, class: "form-control" %>
+                        </div>
+                        <%= form.submit "Submit", class: "btn btn-primary" %>
+                    <% end %>
+                </div>
+
+                <!--Social Icons-->
+                <div class="social-style-one">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+        </section>
+        <!--End Hidden Sidebar -->
+        
+        
+        <!-- Page Banner Start -->
+        <section class="page-banner-area pt-135 rpt-95 pb-110 rpb-70 rel z-1 bgs-cover text-center" style="background-image: url(assets/images/background/banner-bg.png);">
+            <div class="container">
+                <div class="banner-inner text-white wow fadeInUp delay-0-2s">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active">Contact Us</li>
+                        </ol>
+                    </nav>
+                    <h1 class="page-title" style="background-image: url(assets/images/shapes/heading-text.jpg);">Contact Us</h1>
+                </div>
+            </div>
+        </section>
+        <!-- Page Banner End -->
+        
+        
+        <!-- Contact Page Area start -->
+        <section class="contact-page py-140 rpy-100 rel z-1">
+            <div class="container">
+               <div class="row pb-60 justify-content-center">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contact-info-item wow fadeInUp delay-0-2s">
+                            <div class="icon">
+                                <img src="assets/images/icons/contact1.png" alt="Icon">
+                            </div>
+                            <div class="content">
+                                <h5>Phone Number</h5>
+                                <a href="callto:+12555686523">+1255 - 568 - 6523</a><br>
+                                <a href="callto:+12555686523">+1255 - 568 - 6523</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contact-info-item wow fadeInUp delay-0-4s">
+                            <div class="icon">
+                                <img src="assets/images/icons/contact2.png" alt="Icon">
+                            </div>
+                            <div class="content">
+                                <h5>Address line</h5>
+                                <span>Bowery St, New York, NY<br> 10013,USA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contact-info-item wow fadeInUp delay-0-6s">
+                            <div class="icon">
+                                <img src="assets/images/icons/contact3.png" alt="Icon">
+                            </div>
+                            <div class="content">
+                                <h5>Phone Number</h5>
+                                <span>Moday - Friday<br> 09:00 AM - 05:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="contact-page-form wow fadeInUp delay-0-2s">
+                    <%= form_with scope: :contact_form, url: contact_form_index_path, method: :post, local: true, class: "container" do |form| %>
+                        <div class="row">
+                            <div class="col-md-6 wow fadeInUp delay-0-2s">
+                                <div class="form-group">
+                                    <%= form.label :name %>
+                                    <%= form.text_field :name, class: "form-control" %>
+                                </div>
+                            </div>
+                            <div class="col-md-6 wow fadeInUp delay-0-4s">
+                                <div class="form-group">
+                                    <%= form.label :last_name %>
+                                    <%= form.text_field :last_name, class: "form-control" %>
+                                </div>
+                            </div>
+                            <div class="col-md-6 wow fadeInUp delay-0-2s">
+                                <div class="form-group">
+                                    <%= form.label :email %>
+                                    <%= form.email_field :email, class: "form-control" %>
+                                </div>
+                            </div>
+                            <!--
+                            <div class="col-md-6 wow fadeInUp delay-0-4s">
+                                <div class="form-group">
+                                    <input type="text" id="phone" name="phone" class="form-control" value="" placeholder="Phone Number*">
+                                </div>
+                            </div> -->
+                            <div class="col-md-12 wow fadeInUp delay-0-2s">
+                                <div class="form-group">
+                                    <%= form.label :message %>
+                                    <%= form.text_area :message, class: "form-control" %>
+                                </div>
+                            </div>
+                            <div class="col-md-12 text-center wow fadeInUp delay-0-2s">
+                                <%= form.submit "Submit", class: "theme-btn style-two" %>
+                                
+                            </div>
+
+
+                        </div>
+                    <% end %>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Page Area end -->
+        
+        
+        <!-- Location Map Area Start -->
+        <div class="contact-page-map wow fadeInUp delay-0-2s">
+            <div class="our-location">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m10!1m3!1d142190.2862584524!2d-74.01298319978558!3d40.721725351435126!2m1!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sbd!4v1663473911885!5m2!1sen!2sbd" style="border:0; width: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <!-- Location Map Area End -->
+        
+          
+        <!-- Lets Talk Area start -->
+        <div class="lets-talk-area text-center pt-110 rpt-80 pb-75 rpb-100">
+            <div class="container">
+                <a href="contact.html" class="lets-talk-text wow zoomIn delay-0-2s">Let’s Talk <i class="fal fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <!-- Lets Talk Area end -->
+           
+
+        <!-- Headline area start -->
+        <div class="headline-area bgc-primary py-20">
+            <div class="headline-wrap style-two color-black">
+                <span class="marquee-wrap">
+                   <span class="marquee-inner left">
+                        <span class="marquee-item"><b>customer business solution</b><i class="fas fa-bahai"></i></span>
+                        <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
+                        <span class="marquee-item"><b>web development based company</b><i class="fas fa-bahai"></i></span>
+                        <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
+                        <span class="marquee-item"><b>marketing based devlopment</b><i class="fas fa-bahai"></i></span>
+                   </span>
+                   <span class="marquee-inner left">
+                        <span class="marquee-item"><b>customer business solution</b><i class="fas fa-bahai"></i></span>
+                        <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
+                        <span class="marquee-item"><b>web development based company</b><i class="fas fa-bahai"></i></span>
+                        <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
+                        <span class="marquee-item"><b>marketing based devlopment</b><i class="fas fa-bahai"></i></span>
+                   </span>
+                   <span class="marquee-inner left">
+                        <span class="marquee-item"><b>customer business solution</b><i class="fas fa-bahai"></i></span>
+                        <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
+                        <span class="marquee-item"><b>web development based company</b><i class="fas fa-bahai"></i></span>
+                        <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
+                        <span class="marquee-item"><b>marketing based devlopment</b><i class="fas fa-bahai"></i></span>
+                   </span>
+                </span>
+             </div>
+        </div>
+        <!-- Headline Area end -->

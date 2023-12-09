@@ -3,7 +3,12 @@ Rails.application.routes.draw do
 
   get "/articles", to: "articles#index"
   get "/articles/:id", to: "articles#show"
-
+  get "/about", to: "about#index"
+  get "/portfolio", to: "portfolio#index"
+  get "/services", to: "services#index"
+  get "/contact_form", to: "contact_form#new"
+  resources :contact_form, only: %i[new create]
+  
   resources :posts
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
