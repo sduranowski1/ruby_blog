@@ -1,0 +1,817 @@
+<!--Form Back Drop-->
+    <h1>Articles</h1>
+
+    <ul>
+  <% @articles.each do |article| %>
+    <li>
+      <a href="/articles/<%= article.id %>">
+        <%= article.title %>
+      </a>
+    </li>
+  <% end %>
+</ul>
+        <div class="form-back-drop"></div>
+        
+        <!-- Hidden Sidebar -->
+        <section class="hidden-bar">
+            <div class="inner-box text-center">
+                <div class="cross-icon"><span class="fa fa-times"></span></div>
+                <div class="title">
+                    <h4>Get Appointment</h4>
+                </div>
+
+                <!--Appointment Form-->
+                <div class="appointment-form">
+                    <form method="post" action="contact.html">
+                        <div class="form-group">
+                            <input type="text" name="text" value="" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" value="" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Message" rows="5"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="theme-btn style-two">Submit now</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!--Social Icons-->
+                <div class="social-style-one">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+        </section>
+        <!--End Hidden Sidebar -->
+       
+        
+        <!-- Hero Section Start -->
+        <section class="hero-area py-100 rel z-1">
+            <div class="container container-1530">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="hero-content-part rmb-55">
+                            <h1 class="wow fadeInUp delay-0-2s">Digital<i class="fas fa-star-of-life"></i></h1>
+                            <div class="hero-sub-heading wow fadeInUp delay-0-4s">
+                                <%= image_tag("hero/sub-heading.svg", :alt => "Shape") %>
+                                <span class="agency-text">agency</span>
+                            </div>
+                            <div class="text wow fadeInUp delay-0-6s">Welcome to our Print 128 website! We are a professional and reliable printing company that offers a wide range of printing services to meet your needs.</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-image-part">
+                            <div class="hero-main-img wow fadeInRight delay-0-2s">
+                                <%= image_tag("hero/hero-main.jpg", :alt => "Hero") %>
+                                <a href="https://www.youtube.com/watch?v=9Y7ma241N8k" class="mfp-iframe hero-video-play" tabindex="-1">
+                                    <%= image_tag("hero/play-text.svg", :alt => "Video Play") %>    
+                                </a>
+                            </div>
+                            <div class="mail-us wow fadeInRight delay-0-4s">
+                                <i class="far fa-at"></i>
+                                <span>mail us today</span>
+                            </div>
+                            <div class="hero-small-img wow fadeInDown delay-0-6s">
+                                <%= image_tag("hero/hero-small.jpg", :alt => "Hero") %> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-shape">
+                <%= image_tag("hero/hero-shape.png", :alt => "Shape") %> 
+            </div>
+        </section>
+        <!-- Hero Section End -->
+        
+        
+         <!-- Headline area start -->
+        <div class="headline-area bgc-black rel z-2 pt-30">
+            <div class="container-fluid">
+                <div class="headline-wrap">
+                    <span class="marquee-wrap">
+                       <span class="marquee-inner left">
+                            <span class="marquee-item"><b>Open Hours : <span>Mon-Fri</span>: 9 AM – 6 PM Saturday: 9 AM – 4 PM Sunday: <span>Closed</span></b><i class="far fa-asterisk"></i></span>
+                            <span class="marquee-item"><b>Germany —<span>785 15h Street</span>, Office 478Berlin, De 81566 </b><i class="far fa-asterisk"></i></span>
+                            <span class="marquee-item"><b>Get In Touch — phone: +1(800)123-4566 </b><i class="far fa-asterisk"></i></span>
+                       </span>
+                       <span class="marquee-inner left">
+                            <span class="marquee-item"><b>Open Hours : <span>Mon-Fri</span>: 9 AM – 6 PM Saturday: 9 AM – 4 PM Sunday: <span>Closed</span></b><i class="far fa-asterisk"></i></span>
+                            <span class="marquee-item"><b>Germany —<span>785 15h Street</span>, Office 478Berlin, De 81566 </b><i class="far fa-asterisk"></i></span>
+                            <span class="marquee-item"><b>Get In Touch — phone: +1(800)123-4566 </b><i class="far fa-asterisk"></i></span>
+                       </span>
+                       <span class="marquee-inner left">
+                            <span class="marquee-item"><b>Open Hours : <span>Mon-Fri</span>: 9 AM – 6 PM Saturday: 9 AM – 4 PM Sunday: <span>Closed</span></b><i class="far fa-asterisk"></i></span>
+                            <span class="marquee-item"><b>Germany —<span>785 15h Street</span>, Office 478Berlin, De 81566 </b><i class="far fa-asterisk"></i></span>
+                            <span class="marquee-item"><b>Get In Touch — phone: +1(800)123-4566 </b><i class="far fa-asterisk"></i></span>
+                       </span>
+                    </span>
+                 </div>
+            </div>
+        </div>
+        <!-- Headline Area end -->
+        
+        
+        <!-- About Area start -->
+        <section class="about-area bgc-black py-145 rpy-100 rel z-1">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="about-content hover-box-wrap rmb-55 wow fadeInRight delay-0-2s">
+                            <div class="section-title">
+                                <span class="sub-title mb-15">Trusted web design agency</span>
+                                <h2>We’re a digital design studio connecting brands to people <span>through</span> craft and culture. <i class="fas fa-asterisk"></i></h2>
+                            </div>
+                            <div class="hover-box">
+                                <span>What We Do</span>
+                                <i class="fal fa-arrow-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="our-clients wow fadeInLeft delay-0-2s">
+                            <%= image_tag("client-logos/client-logo1.png", :alt => "Client Logo") %> 
+                            <%= image_tag("client-logos/client-logo2.png", :alt => "Client Logo") %> 
+                            <%= image_tag("client-logos/client-logo3.png", :alt => "Client Logo") %> 
+                            <%= image_tag("client-logos/client-logo4.png", :alt => "Client Logo") %> 
+                            <%= image_tag("client-logos/client-logo5.png", :alt => "Client Logo") %> 
+                            <%= image_tag("client-logos/client-logo6.png", :alt => "Client Logo") %> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Area end -->
+           
+           
+        <!-- Video Section Start -->
+        <section class="video-area rel z-1">
+            <div class="container">
+                <div class="video-top text-center pt-30 mb-30">
+                    <h5><a href="contact.html">Contact us</a> or send an <span>email to</span> info@Mehedii.com</h5>
+                </div>
+            </div>
+            <div class="container container-1695">
+                <div class="video-inner pt-110 rpt-60 text-center" style="background-image: url(app/assets/images/video/video-bg.jpg);">
+                    <span class="play-intro wow fadeInUp delay-0-2s"><span>Play</span> intro</span>
+                    <div class="row rpt-15 align-items-center">
+                        <div class="col-xl-2 offset-xl-5 col-4 offset-4 wow zoomIn delay-0-2s">
+                            <a href="https://www.youtube.com/watch?v=9Y7ma241N8k" class="mfp-iframe hero-video-play" tabindex="-1">
+                                <%= image_tag("hero/play-text.svg", :alt => "Video Play") %> 
+                            </a>
+                        </div>
+                        <div class="col-xl-5 col-4 text-start wow fadeInRight delay-0-2s">
+                            <span class="video-text">Video</span>
+                        </div>
+                    </div>
+                    <div class="shape-image d-flex mt-60 rmt-40">
+                        <%= image_tag("shapes/wave-shape.png", :alt => "Wave") %> 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Video Section End -->
+           
+           
+        <!-- Services Area start -->
+        <section class="services-area pt-135 rpt-100 rel z-1">
+            <div class="container">
+                <div class="row pb-60 align-items-center justify-content-between">
+                    <div class="col-xl-6 col-lg-8 wow fadeInLeft delay-0-2s">
+                        <div class="section-title mb-20 rmb-35">
+                            <span class="sub-title mb-15">Trusted web design Service</span>
+                            <h2>modern & intuitive web <span>solutions</span></h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-lg-end wow fadeInRight delay-0-2s">
+                        <a href="services.html" class="theme-btn">View all service</a>
+                    </div>
+                </div>
+                 <div class="row gap-40">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-item wow fadeInUp delay-0-2s">
+                            <div class="content">
+                                <h5><a href="service-details.html">WEBSITE DESIGN</a></h5>
+                                <p>Be advised that image .</p>
+                            </div>
+                            <a href="service-details.html" class="details-btn"><i class="fal fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-item wow fadeInUp delay-0-4s">
+                            <div class="content">
+                                <h5><a href="service-details.html">SOFTWERE DESIGN</a></h5>
+                                <p>Be advised that image .</p>
+                            </div>
+                            <a href="service-details.html" class="details-btn"><i class="fal fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-item wow fadeInUp delay-0-6s">
+                            <div class="content">
+                                <h5><a href="service-details.html">GRAPHICS DESIGN</a></h5>
+                                <p>Be advised that image .</p>
+                            </div>
+                            <a href="service-details.html" class="details-btn"><i class="fal fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-item wow fadeInUp delay-0-2s">
+                            <div class="content">
+                                <h5><a href="service-details.html">MOBILE APP DESIGN</a></h5>
+                                <p>Be advised that image .</p>
+                            </div>
+                            <a href="service-details.html" class="details-btn"><i class="fal fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-item wow fadeInUp delay-0-4s">
+                            <div class="content">
+                                <h5><a href="service-details.html">DIGITAL MARKETING</a></h5>
+                                <p>Be advised that image .</p>
+                            </div>
+                            <a href="service-details.html" class="details-btn"><i class="fal fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-item wow fadeInUp delay-0-6s">
+                            <div class="content">
+                                <h5><a href="service-details.html">UI/UX DEVELOPMENT</a></h5>
+                                <p>Be advised that image .</p>
+                            </div>
+                            <a href="service-details.html" class="details-btn"><i class="fal fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services Area end -->
+           
+           
+        <!-- Headline area start -->
+        <div class="headline-area-big pt-70 rpt-20">
+            <div class="headline-wrap">
+                <span class="marquee-heading-two">
+                   <span class="marquee-inner left">
+                        <span class="marquee-item"><a href="#">design</a>  <span>/</span>  <a href="#">development</a>  <span>/</span>  <a href="#">marketng</a> <span>/</span></span>
+                        <span class="marquee-item"><a href="#">design</a>  <span>/</span>  <a href="#">development</a>  <span>/</span>  <a href="#">marketng</a> <span>/</span></span>
+                        <span class="marquee-item"><a href="#">design</a>  <span>/</span>  <a href="#">development</a>  <span>/</span>  <a href="#">marketng</a> <span>/</span></span>
+                   </span>
+                </span>
+             </div>
+        </div>
+        <!-- Headline Area end -->
+          
+          
+        <!-- About Agency Area start -->
+        <section class="about-agency-area pt-135 rpt-100 rel z-1">
+            <div class="container">
+                <div class="row pb-80 align-items-center">
+                    <div class="col-lg-6 wow fadeInRight delay-0-2s">
+                        <div class="about-agency-image rmb-55">
+                            <%= image_tag("about/about-left.png", :alt => "About Agency") %> 
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInLeft delay-0-2s">
+                        <div class="about-agency-content">
+                            <div class="section-title mb-30">
+                                <span class="sub-title mb-15">Trusted web design agency</span>
+                                <h2>Why should choose our design <span>agency</span></h2>
+                            </div>
+                            <p>There are many variations of simply free text passages of available but the majority have suffered alteration in some form, by injected hum randomis words which don't slightly.</p>
+                            <h5>Proin est lacus, sagittislobortis iaculise get sagittislo</h5>
+                            <div class="skillbar" data-percent="88">
+                                <span class="skillbar-title">Marketing</span>
+                                <div class="progress-bar-striped skillbar-bar progress-bar-animated" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+                                <span class="skill-bar-percent"></span></div>
+                            </div>
+                            <div class="row justify-content-between pt-5">
+                                <div class="col-sm-6">
+                                    <div class="service-stye-two">
+                                        <div class="icon">
+                                            <%= image_tag("icons/light.png", :alt => "Icon") %> 
+                                        </div>
+                                        <h6>Leader of creative agency</h6>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="service-stye-two">
+                                        <div class="icon">
+                                            <%= image_tag("icons/development.png", :alt => "Icon") %> 
+                                        </div>
+                                        <h6>Highest quality development</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Agency Area end -->
+          
+          
+         <!-- Headline area start -->
+        <div class="headline-area pt-65 rpt-15">
+            <div class="container-fluid">
+                <div class="headline-wrap style-two">
+                    <span class="marquee-wrap">
+                       <span class="marquee-inner left">
+                            <span class="marquee-item"><b>customer business solution</b><i class="fas fa-bahai"></i></span>
+                            <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
+                            <span class="marquee-item"><b>web development based company</b><i class="fas fa-bahai"></i></span>
+                            <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
+                            <span class="marquee-item"><b>marketing based devlopment</b><i class="fas fa-bahai"></i></span>
+                       </span>
+                       <span class="marquee-inner left">
+                            <span class="marquee-item"><b>customer business solution</b><i class="fas fa-bahai"></i></span>
+                            <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
+                            <span class="marquee-item"><b>web development based company</b><i class="fas fa-bahai"></i></span>
+                            <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
+                            <span class="marquee-item"><b>marketing based devlopment</b><i class="fas fa-bahai"></i></span>
+                       </span>
+                       <span class="marquee-inner left">
+                            <span class="marquee-item"><b>customer business solution</b><i class="fas fa-bahai"></i></span>
+                            <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
+                            <span class="marquee-item"><b>web development based company</b><i class="fas fa-bahai"></i></span>
+                            <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
+                            <span class="marquee-item"><b>marketing based devlopment</b><i class="fas fa-bahai"></i></span>
+                       </span>
+                    </span>
+                 </div>
+            </div>
+        </div>
+        <!-- Headline Area end -->
+        
+        
+        <!-- Portfolio Area start -->
+        <section class="portfolio-area pt-140 rpt-100 rel z-1">
+            <div class="section-title text-center mb-70 wow fadeInUp delay-0-2s">
+                <span class="sub-title mb-15">work portfolio for company</span>
+                <h2> Recent Work <span>Portfolio</span></h2>
+            </div>
+            <div class="row portfolio-masonry-active style-one">
+                <div class="col-xl-3 col-sm-6">
+                    <div class="portfolio-item wow fadeInUp delay-0-2s">
+                        <div class="portfolio-image">
+                            <%= image_tag("portfolio/portfolio1.jpg", :alt => "Portfolio") %> 
+                        </div>
+                        <a class="hover-box" href="portfolio-details.html">
+                            <span>View Project</span>
+                            <i class="fal fa-long-arrow-down"></i>
+                        </a>
+                        <div class="portfolio-content">
+                            <h6><a href="portfolio-details.html">Digital Marketing</a></h6>
+                            <a class="tag-category" href="blog.html">Art , Direction</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 order-xl-2">
+                    <div class="portfolio-item wow fadeInUp delay-0-6s">
+                        <div class="portfolio-image">
+                            <%= image_tag("portfolio/portfolio3.jpg", :alt => "Portfolio") %> 
+                        </div>
+                        <a class="hover-box" href="portfolio-details.html">
+                            <span>View Project</span>
+                            <i class="fal fa-long-arrow-down"></i>
+                        </a>
+                        <div class="portfolio-content">
+                            <h6><a href="portfolio-details.html">Digital Marketing</a></h6>
+                            <a class="tag-category" href="blog.html">Art , Direction</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-8">
+                    <div class="portfolio-item wow fadeInUp delay-0-4s">
+                        <div class="portfolio-image">
+                            <%= image_tag("portfolio/portfolio2.jpg", :alt => "Portfolio") %> 
+                        </div>
+                        <a class="hover-box" href="portfolio-details.html">
+                            <span>View Project</span>
+                            <i class="fal fa-long-arrow-down"></i>
+                        </a>
+                        <div class="portfolio-content">
+                            <h6><a href="portfolio-details.html">Digital Marketing</a></h6>
+                            <a class="tag-category" href="blog.html">Art , Direction</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item wow fadeInUp delay-0-2s">
+                        <div class="portfolio-image">
+                            <%= image_tag("portfolio/portfolio4.jpg", :alt => "Portfolio") %> 
+                        </div>
+                        <a class="hover-box" href="portfolio-details.html">
+                            <span>View Project</span>
+                            <i class="fal fa-long-arrow-down"></i>
+                        </a>
+                        <div class="portfolio-content">
+                            <h6><a href="portfolio-details.html">Digital Marketing</a></h6>
+                            <a class="tag-category" href="blog.html">Art , Direction</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Portfolio Area end -->
+        
+        
+        <!-- Awward Area start -->
+        <section class="awwards-area pt-110 rpt-70">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-8">
+                        <div class="section-title mb-70 wow fadeInUp delay-0-2s">
+                            <span class="sub-title mb-15">our honurable awwards</span>
+                            <h2>Checkout our <span>awards</span> & achievements</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="awwards-wrap">
+                    <div class="awward-item wow fadeInUp delay-0-2s">
+                        <div class="year-website">
+                            <span class="year">2012</span>
+                            <div class="text">This Awwards provide from govt.bd</div>
+                        </div>
+                        <div class="icon">
+                            <%= image_tag("icons/awward1.svg", :alt => "Awward") %> 
+
+                        </div>
+                        <div class="content">
+                            <h5>Awwwards animation quality</h5>
+                            <span class="number">02</span>
+                        </div>
+                        <div class="award-btn">
+                            <a href="service-details.html" class="details-btn"><i class="fal fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="awward-item wow fadeInUp delay-0-3s">
+                        <div class="year-website">
+                            <span class="year">2012</span>
+                            <div class="text">This Awwards provide from govt.bd</div>
+                        </div>
+                        <div class="icon">
+                            <%= image_tag("icons/awward2.svg", :alt => "Awward") %> 
+                        </div>
+                        <div class="content">
+                            <h5>Site of the day</h5>
+                            <span class="number">02</span>
+                        </div>
+                        <div class="award-btn">
+                            <a href="service-details.html" class="details-btn"><i class="fal fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="awward-item wow fadeInUp delay-0-4s">
+                        <div class="year-website">
+                            <span class="year">2012</span>
+                            <div class="text">This Awwards provide from govt.bd</div>
+                        </div>
+                        <div class="icon">
+                            <%= image_tag("icons/awward3.svg", :alt => "Awward") %> 
+
+                        </div>
+                        <div class="content">
+                            <h5>Creative product design</h5>
+                            <span class="number">02</span>
+                        </div>
+                        <div class="award-btn">
+                            <a href="service-details.html" class="details-btn"><i class="fal fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="awward-item wow fadeInUp delay-0-5s">
+                        <div class="year-website">
+                            <span class="year">2012</span>
+                            <div class="text">This Awwards provide from govt.bd</div>
+                        </div>
+                        <div class="icon">
+                            <%= image_tag("icons/awward4.svg", :alt => "Awward") %> 
+                        </div>
+                        <div class="content">
+                            <h5>Awwwards animation quality</h5>
+                            <span class="number">02</span>
+                        </div>
+                        <div class="award-btn">
+                            <a href="service-details.html" class="details-btn"><i class="fal fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Awward Area end -->
+         
+         
+        <!-- Headline area start -->
+        <div class="headline-area-big pt-130 rpt-50">
+            <div class="headline-wrap">
+                <span class="marquee-heading-three">
+                   <span class="marquee-inner left">
+                        <span class="marquee-item">Schedule a Free <b>Consultation</b> for Designow and Door Replacement</span>
+                        <span class="marquee-item">Schedule a Free <b>Consultation</b> for Designow and Door Replacement</span>
+                        <span class="marquee-item">Schedule a Free <b>Consultation</b> for Designow and Door Replacement</span>
+                   </span>
+                    <a href="contact.html" class="hover-box">
+                        <span>Get<br> Schedule Now</span>
+                    </a>
+                </span>
+             </div>
+        </div>
+        <!-- Headline Area end -->
+          
+          
+        <!-- Team Area start -->
+        <section class="team-area overflow-hidden pt-140 rpt-50 pb-120 rpb-70 rel z-1">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-7 col-lg-9">
+                        <div class="section-title text-center mb-70 wow fadeInUp delay-0-2s">
+                            <span class="sub-title mb-15">team member of company</span>
+                            <h2>Extra ordinary <span>creation</span> Team behind</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container container-1450">
+                <div class="row justify-content-center">
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="team-member wow fadeInUp delay-0-2s">
+                            <div class="image">
+                                <%= image_tag("team/team1.jpg", :alt => "Team") %> 
+                            </div>
+                            <div class="content">
+                                <span class="designation">creative director</span>
+                                <h6>Ronald Richards</h6>
+                                <div class="social-style-two">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="team-member mt-45 wow fadeInUp delay-0-3s">
+                            <div class="image">
+                                <%= image_tag("team/team2.jpg", :alt => "Team") %> 
+                            </div>
+                            <div class="content">
+                                <span class="designation">creative director</span>
+                                <h6>ESTHER HOWAR</h6>
+                                <div class="social-style-two">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="team-member wow fadeInUp delay-0-4s">
+                            <div class="image">
+                                <%= image_tag("team/team3.jpg", :alt => "Team") %> 
+                            </div>
+                            <div class="content">
+                                <span class="designation">creative director</span>
+                                <h6>Jenny Wilson</h6>
+                                <div class="social-style-two">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="team-member mt-45 wow fadeInUp delay-0-5s">
+                            <div class="image">
+                                <%= image_tag("team/team4.jpg", :alt => "Team") %> 
+                            </div>
+                            <div class="content">
+                                <span class="designation">creative director</span>
+                                <h6>Bessie Cooper</h6>
+                                <div class="social-style-two">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-shapes">
+                <div class="shape one">
+                    <%= image_tag("shapes/circle.png", :alt => "Circle") %> 
+                </div>
+                <div class="shape two">
+                    <%= image_tag("shapes/box.png", :alt => "Box") %>  
+                </div>
+            </div>
+        </section>
+        <!-- Team Area end -->
+          
+          
+        <!-- Testimonials Area start -->
+        <section class="testimonials-area py-145 rpy-100 rel z-1">
+            <div class="container">
+                <div class="row gap-140 align-items-center">
+                    <div class="col-lg-5 wow fadeInRight delay-0-2s">
+                        <div class="testimonials-image rmb-55">
+                            <%= image_tag("testimonials/testimonials-left.png", :alt => "Testimonials") %> 
+                        </div>
+                    </div>
+                    <div class="col-lg-7 wow fadeInLeft delay-0-2s">
+                        <div class="testimonials-content">
+                            <div class="section-title mb-35">
+                                <span class="sub-title mb-15">know what our client’s says</span>
+                                <h2>made the biggest <span>players</span> happy</h2>
+                            </div>
+                            <div class="testimonials-active">
+                                <div class="testimonial-item">
+                                    <div class="author-speech">
+                                        <p>creative agency, we believe in the power of imagination and innovation. We are constantly pushing the boundaries of what is possible, and strive to create work that is not only bea utiful and effective,but also meaningful and impactful.</p>
+                                    </div>
+                                    <div class="testimonial-footer">
+                                        <div class="testimonial-author">
+                                            <div class="author-image">
+                                                <%= image_tag("testimonials/author1.png", :alt => "Author Image") %> 
+                                            </div>
+                                            <div class="author-info">
+                                                <h6>Cameron Williamson</h6>
+                                                <span class="designation">graphics Design</span>
+                                            </div>
+                                        </div>
+                                        <div class="ratting">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-item">
+                                    <div class="author-speech">
+                                        <p>creative agency, we believe in the power of imagination and innovation. We are constantly pushing the boundaries of what is possible, and strive to create work that is not only bea utiful and effective,but also meaningful and impactful.</p>
+                                    </div>
+                                    <div class="testimonial-footer">
+                                        <div class="testimonial-author">
+                                            <div class="author-image">
+                                                <%= image_tag("testimonials/author1.png", :alt => "Author Image") %> 
+                                            </div>
+                                            <div class="author-info">
+                                                <h6>Cameron Williamson</h6>
+                                                <span class="designation">graphics Design</span>
+                                            </div>
+                                        </div>
+                                        <div class="ratting">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials Area end -->
+          
+          
+         <!-- Headline area start -->
+        <div class="headline-area bgc-lighter py-25">
+            <div class="container-fluid">
+                <div class="headline-wrap style-two">
+                    <span class="marquee-wrap">
+                       <span class="marquee-inner left">
+                            <span class="marquee-item"><b>customer business solution</b><i class="fas fa-bahai"></i></span>
+                            <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
+                            <span class="marquee-item"><b>web development based company</b><i class="fas fa-bahai"></i></span>
+                            <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
+                            <span class="marquee-item"><b>marketing based devlopment</b><i class="fas fa-bahai"></i></span>
+                       </span>
+                       <span class="marquee-inner left">
+                            <span class="marquee-item"><b>customer business solution</b><i class="fas fa-bahai"></i></span>
+                            <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
+                            <span class="marquee-item"><b>web development based company</b><i class="fas fa-bahai"></i></span>
+                            <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
+                            <span class="marquee-item"><b>marketing based devlopment</b><i class="fas fa-bahai"></i></span>
+                       </span>
+                       <span class="marquee-inner left">
+                            <span class="marquee-item"><b>customer business solution</b><i class="fas fa-bahai"></i></span>
+                            <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
+                            <span class="marquee-item"><b>web development based company</b><i class="fas fa-bahai"></i></span>
+                            <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
+                            <span class="marquee-item"><b>marketing based devlopment</b><i class="fas fa-bahai"></i></span>
+                       </span>
+                    </span>
+                 </div>
+            </div>
+        </div>
+        <!-- Headline Area end -->
+        
+        
+        <!-- Blog Area start -->
+        <section class="blog-area pt-150 rpt-100 pb-50 rel z-1">
+            <div class="container">
+                <div class="row pb-55 align-items-center justify-content-between">
+                    <div class="col-xl-6 col-lg-8 wow fadeInLeft delay-0-2s">
+                        <div class="section-title mb-20 rmb-35">
+                            <span class="sub-title mb-15">check our news & Blogs</span>
+                            <h2>Checkout our <span>awards</span> & achievements</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-lg-end wow fadeInRight delay-0-2s">
+                        <a href="blog.html" class="theme-btn style-two">View all blog</a>
+                    </div>
+                </div>
+                <div class="blog-item wow fadeInUp delay-0-2s">
+                    <div class="content">
+                        <ul class="blog-meta">
+                            <li>
+                                <a href="#">02 Apr 2023</a>
+                            </li>
+                            <li>
+                                <a href="#">Comments (03)</a>
+                            </li>
+                        </ul>
+                        <h4><a href="blog-details.html">Trending code settings for a nice portfolio</a></h4>
+                    </div>
+                    <div class="image">
+                        <%= image_tag("blog/blog1.jpg", :alt => "Blog") %> 
+                    </div>
+                    <a class="read-more" href="blog-details.html"><i class="fal fa-arrow-up"></i> View blog details</a>
+                </div>
+                <div class="blog-item wow fadeInUp delay-0-2s">
+                    <div class="content">
+                        <ul class="blog-meta">
+                            <li>
+                                <a href="#">02 Apr 2023</a>
+                            </li>
+                            <li>
+                                <a href="#">Comments (03)</a>
+                            </li>
+                        </ul>
+                        <h4><a href="blog-details.html">Our web design and development process</a></h4>
+                    </div>
+                    <div class="image">
+                        <%= image_tag("blog/blog1.jpg", :alt => "Blog") %> 
+                    </div>
+                    <a class="read-more" href="blog-details.html"><i class="fal fa-arrow-up"></i> View blog details</a>
+                </div>
+                <div class="blog-item wow fadeInUp delay-0-2s">
+                    <div class="content">
+                        <ul class="blog-meta">
+                            <li>
+                                <a href="#">02 Apr 2023</a>
+                            </li>
+                            <li>
+                                <a href="#">Comments (03)</a>
+                            </li>
+                        </ul>
+                        <h4><a href="blog-details.html">Transparent Pricing for Custom Web Design</a></h4>
+                    </div>
+                    <div class="image">
+                        <%= image_tag("blog/blog1.jpg", :alt => "Blog") %> 
+                    </div>
+                    <a class="read-more" href="blog-details.html"><i class="fal fa-arrow-up"></i> View blog details</a>
+                </div>
+                <div class="blog-item wow fadeInUp delay-0-2s">
+                    <div class="content">
+                        <ul class="blog-meta">
+                            <li>
+                                <a href="#">02 Apr 2023</a>
+                            </li>
+                            <li>
+                                <a href="#">Comments (03)</a>
+                            </li>
+                        </ul>
+                        <h4><a href="blog-details.html">Through a multi-channel approach in the areas</a></h4>
+                    </div>
+                    <div class="image">
+                        <%= image_tag("blog/blog1.jpg", :alt => "Blog") %> 
+                    </div>
+                    <a class="read-more" href="blog-details.html"><i class="fal fa-arrow-up"></i> View blog details</a>
+                </div>
+            </div>
+        </section>
+        <!-- Blog Area end -->
+        
+        
+        <!-- Lets Talk Area start -->
+        <div class="lets-talk-area text-center py-75 rpt-45 rpb-100">
+            <div class="container">
+                <a href="contact.html" class="lets-talk-text wow zoomIn delay-0-2s">Let’s Talk <i class="fal fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <!-- Lets Talk Area end -->

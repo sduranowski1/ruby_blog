@@ -1,0 +1,265 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Posts</h1>
+
+<div id="posts">
+  <% @posts.each do |post| %>
+    <%= render post %>
+    <p>
+      <%= link_to "Show this post", post %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New post", new_post_path %>
+
+<!--Form Back Drop-->
+<div class="form-back-drop"></div>
+
+<!-- Hidden Sidebar -->
+<section class="hidden-bar">
+    <div class="inner-box text-center">
+        <div class="cross-icon"><span class="fa fa-times"></span></div>
+        <div class="title">
+            <h4>Get Appointment</h4>
+        </div>
+
+        <!--Appointment Form-->
+        <div class="appointment-form">
+            <form method="post" action="contact.html">
+                <div class="form-group">
+                    <input type="text" name="text" value="" placeholder="Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" value="" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Message" rows="5"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="theme-btn style-two">Submit now</button>
+                </div>
+            </form>
+        </div>
+
+        <!--Social Icons-->
+        <div class="social-style-one">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+    </div>
+</section>
+<!--End Hidden Sidebar -->
+
+
+<!-- Page Banner Start -->
+<section class="page-banner-area pt-135 rpt-95 pb-110 rpb-70 rel z-1 bgs-cover text-center" style="background-image: url(assets/images/background/banner-bg.png);">
+    <div class="container">
+        <div class="banner-inner text-white wow fadeInUp delay-0-2s">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">blog page</li>
+                </ol>
+            </nav>
+            <h1 class="page-title" style="background-image: url(assets/images/shapes/heading-text.jpg);">blog page</h1>
+        </div>
+    </div>
+</section>
+<!-- Page Banner End -->
+
+
+<!-- Blog Page Two Area start -->
+<div class="blog-page-two pt-100 rpt-70">
+    <div class="container">
+        <div class="row gap-50">
+            <div class="col-lg-8">
+                <div class="blog-standard-item wow fadeInUp delay-0-2s">
+                    <div class="image">
+                        <a href="#" class="category">Business</a>
+                        <img src="assets/images/blog/blog-standard1.jpg" alt="Blog">
+                    </div>
+                    <div class="content">
+                        <ul class="blog-meta">
+                            <li><i class="fal fa-user"></i> <a href="#">Mehedii .Ha</a></li>
+                            <li><i class="fal fa-comments"></i> <a href="#">Coments (03)</a></li>
+                            <li><i class="fal fa-clock"></i> <a href="#">3 min Read</a></li>
+                        </ul>
+                        <h4><a href="blog-details.html">The whimsically named Egg Canvas brainch </a></h4>
+                        <p>There are many variations of passages of Lorem Ipsum available, but majority have suffered teration in some form, by injected humour, or randomised words which don't look even slight believable. If you are going to use a passage of Lorem Ipsum.</p>
+                        <a href="blog-details.html" class="read-more">Read More <i class="far fa-long-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-standard-item wow fadeInUp delay-0-2s">
+                    <div class="image">
+                        <a href="#" class="category">Business</a>
+                        <img src="assets/images/blog/blog-standard2.jpg" alt="Blog">
+                    </div>
+                    <div class="content">
+                        <ul class="blog-meta">
+                            <li><i class="fal fa-user"></i> <a href="#">Mehedii .Ha</a></li>
+                            <li><i class="fal fa-comments"></i> <a href="#">Coments (03)</a></li>
+                            <li><i class="fal fa-clock"></i> <a href="#">3 min Read</a></li>
+                        </ul>
+                        <h4><a href="blog-details.html">The whimsically named Egg Canvas brainch </a></h4>
+                        <p>There are many variations of passages of Lorem Ipsum available, but majority have suffered teration in some form, by injected humour, or randomised words which don't look even slight believable. If you are going to use a passage of Lorem Ipsum.</p>
+                        <a href="blog-details.html" class="read-more">Read More <i class="far fa-long-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-standard-item wow fadeInUp delay-0-2s">
+                    <div class="image">
+                        <a href="#" class="category">Business</a>
+                        <img src="assets/images/blog/blog-standard3.jpg" alt="Blog">
+                    </div>
+                    <div class="content">
+                        <ul class="blog-meta">
+                            <li><i class="fal fa-user"></i> <a href="#">Mehedii .Ha</a></li>
+                            <li><i class="fal fa-comments"></i> <a href="#">Coments (03)</a></li>
+                            <li><i class="fal fa-clock"></i> <a href="#">3 min Read</a></li>
+                        </ul>
+                        <h4><a href="blog-details.html">The whimsically named Egg Canvas brainch </a></h4>
+                        <p>There are many variations of passages of Lorem Ipsum available, but majority have suffered teration in some form, by injected humour, or randomised words which don't look even slight believable. If you are going to use a passage of Lorem Ipsum.</p>
+                        <a href="blog-details.html" class="read-more">Read More <i class="far fa-long-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                 <ul class="pagination flex-wrap justify-content-center wow fadeInUp delay-0-2s">
+                    <li class="page-item disabled">
+                        <span class="page-link"><i class="far fa-long-arrow-left"></i></span>
+                    </li>
+                    <li class="page-item active">
+                        <span class="page-link">
+                            1
+                            <span class="sr-only">(current)</span>
+                        </span>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#"><i class="far fa-long-arrow-right"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-7 col-sm-9">
+                <div class="main-sidebar rmt-65">
+                    <div class="widget widget-author wow fadeInUp delay-0-4s">
+                        <img src="assets/images/widgets/author.jpg" alt="Author">
+                        <h6>Rosalina D. Willaim</h6>
+                        <span class="designation">Blogger/Photographer</span>
+                        <p>he whimsically named Egg Canvas is the design director and photographer in New York. Why the nam</p>
+                        <div class="social-style-one">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="widget widget-search wow fadeInUp delay-0-2s">
+                        <h5 class="widget-title">search here</h5>
+                        <form action="#" class="default-search-form">
+                            <input type="text" placeholder="search here..." required>
+                            <button type="submit" class="searchbutton far fa-search"></button>
+                        </form>
+                    </div>
+                    <div class="widget widget-recent-news wow fadeInUp delay-0-2s">
+                        <h5 class="widget-title">Recent Blog</h5>
+                        <ul>
+                            <li>
+                                <div class="image">
+                                    <img src="assets/images/widgets/blog1.jpg" alt="Blog">
+                                </div>
+                                <div class="content">
+                                    <a class="date" href="#"><i class="far fa-calendar-alt"></i> Jun 23,2023</a>
+                                    <h6><a href="blog-details.html">Budget Issues Force The Our To Become</a></h6>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="image">
+                                    <img src="assets/images/widgets/blog2.jpg" alt="Blog">
+                                </div>
+                                <div class="content">
+                                    <a class="date" href="#"><i class="far fa-calendar-alt"></i> Jun 23,2023</a>
+                                    <h6><a href="blog-details.html">The Best Products That Shape Fashion</a></h6>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="image">
+                                    <img src="assets/images/widgets/blog3.jpg" alt="Blog">
+                                </div>
+                                <div class="content">
+                                    <a class="date" href="#"><i class="far fa-calendar-alt"></i> Jun 23,2023</a>
+                                    <h6><a href="blog-details.html">Budget Issues Force The Our To Become</a></h6>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="widget widget-category wow fadeInUp delay-0-4s">
+                        <h5 class="widget-title">Catagories</h5>
+                        <ul>
+                            <li><a href="blog.html">Graphic Design <span>03</span></a></li>
+                            <li><a href="blog.html">Web Development <span>03</span></a></li>
+                            <li><a href="blog.html">Digital Marketing <span>03</span></a></li>
+                            <li><a href="blog.html">UI/UX Development <span>03</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="widget widget-tag-cloud wow fadeInUp delay-0-2s">
+                        <h5 class="widget-title">Popular Tags</h5>
+                        <div class="tag-coulds">
+                            <a href="blog.html">Design</a>
+                            <a href="blog.html">marketing</a>
+                            <a href="blog.html">search</a>
+                            <a href="blog.html">branding</a>
+                            <a href="blog.html">startup</a>
+                            <a href="blog.html">tech</a>
+                            <a href="blog.html">landing</a>
+                            <a href="blog.html">coding</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Blog Page Two Area end -->
+
+  
+<!-- Lets Talk Area start -->
+<div class="lets-talk-area text-center pt-120 rpt-90 pb-75 rpb-100">
+    <div class="container">
+        <a href="contact.html" class="lets-talk-text wow zoomIn delay-0-2s">Let’s Talk <i class="fal fa-arrow-right"></i></a>
+    </div>
+</div>
+<!-- Lets Talk Area end -->
+   
+
+<!-- Headline area start -->
+<div class="headline-area bgc-primary py-20">
+    <div class="headline-wrap style-two color-black">
+        <span class="marquee-wrap">
+           <span class="marquee-inner left">
+                <span class="marquee-item"><b>customer business solution</b><i class="fas fa-bahai"></i></span>
+                <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
+                <span class="marquee-item"><b>web development based company</b><i class="fas fa-bahai"></i></span>
+                <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
+                <span class="marquee-item"><b>marketing based devlopment</b><i class="fas fa-bahai"></i></span>
+           </span>
+           <span class="marquee-inner left">
+                <span class="marquee-item"><b>customer business solution</b><i class="fas fa-bahai"></i></span>
+                <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
+                <span class="marquee-item"><b>web development based company</b><i class="fas fa-bahai"></i></span>
+                <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
+                <span class="marquee-item"><b>marketing based devlopment</b><i class="fas fa-bahai"></i></span>
+           </span>
+           <span class="marquee-inner left">
+                <span class="marquee-item"><b>customer business solution</b><i class="fas fa-bahai"></i></span>
+                <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
+                <span class="marquee-item"><b>web development based company</b><i class="fas fa-bahai"></i></span>
+                <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
+                <span class="marquee-item"><b>marketing based devlopment</b><i class="fas fa-bahai"></i></span>
+           </span>
+        </span>
+     </div>
+</div>
+<!-- Headline Area end -->
