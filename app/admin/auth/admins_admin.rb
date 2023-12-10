@@ -1,7 +1,7 @@
-Trestle.resource(:users, model: Admin, scope: Auth) do
+Trestle.resource(:admins, model: Admin, scope: Auth) do
   menu do
     group :configuration, priority: :last do
-      item :users, icon: "fas fa-users"
+      item :admins, icon: "fas fa-users"
     end
   end
 
