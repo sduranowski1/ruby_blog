@@ -7,7 +7,7 @@ Trestle.resource(:posts) do
   #
   # table do
   #   column :name
-  #   column :created_at, align: :center
+  #   column :created_at, align: :center 
   #   actions
   # end
 
