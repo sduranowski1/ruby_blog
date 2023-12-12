@@ -1,4 +1,4 @@
-Trestle.resource(:account, model: Admin, scope: Auth, singular: true) do
+Trestle.resource(:account, model: User, scope: Auth, singular: true) do
   instance do
     current_user
   end

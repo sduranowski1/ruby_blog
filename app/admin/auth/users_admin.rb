@@ -1,13 +1,13 @@
-Trestle.resource(:admins, model: Admin, scope: Auth) do
+Trestle.resource(:users, model: User, scope: Auth) do
   menu do
     group :configuration, priority: :last do
-      item :admins, icon: "fas fa-users"
+      item :users, icon: "fas fa-users"
     end
   end
 
   table do
-    column :avatar, header: false do |admin|
-      avatar_for(admin)
+    column :avatar, header: false do |user|
+      avatar_for(user)
     end
     column :email, link: true
     column :first_name
@@ -17,7 +17,7 @@ Trestle.resource(:admins, model: Admin, scope: Auth) do
     end
   end
 
-  form do |admin|
+  form do |user|
     text_field :email
 
     row do
