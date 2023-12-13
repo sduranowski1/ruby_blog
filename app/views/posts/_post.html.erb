@@ -1,3 +1,4 @@
+<!--
 <div id="<%= dom_id post %>">
   <p>
     <strong>Title:</strong>
@@ -10,3 +11,21 @@
   </p>
 
 </div>
+-->
+
+<div class="blog-standard-item wow fadeInUp delay-0-2s" id="<%= dom_id post %>">
+                    <div class="image">
+                        <a href="#" class="category">Business</a>
+                        <%= image_tag("blog/blog-standard1.jpg", :alt => "Blog") %> 
+                    </div>
+                    <div class="content">
+                        <ul class="blog-meta">
+                            <li><i class="fal fa-user"></i> <a href="#">Mehedii .Ha</a></li>
+                            <li><i class="fal fa-comments"></i> <a href="#">Coments (03)</a></li>
+                            <li><i class="fal fa-clock"></i> <a href="#">3 min Read</a></li>
+                        </ul>
+                        <h4><a href="blog-details.html"><%= post.title %></a></h4>
+                        <p><%= post.content %></p>
+
+                    </div>
+                </div>

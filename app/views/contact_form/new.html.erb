@@ -1,5 +1,7 @@
+<!--
 <h1>Contact#index</h1>
 <p>Find me in app/views/contact/index.html.erb</p>
+-->
 <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>">
       <%= value %>
@@ -53,7 +55,7 @@
         
         
         <!-- Page Banner Start -->
-        <section class="page-banner-area pt-135 rpt-95 pb-110 rpb-70 rel z-1 bgs-cover text-center" style="background-image: url(assets/images/background/banner-bg.png);">
+        <section class="page-banner-area pt-135 rpt-95 pb-110 rpb-70 rel z-1 bgs-cover text-center" style="background-image: url('<%= asset_path("background/banner-bg.png") %>');">
             <div class="container">
                 <div class="banner-inner text-white wow fadeInUp delay-0-2s">
                     <nav aria-label="breadcrumb">
@@ -62,7 +64,7 @@
                             <li class="breadcrumb-item active">Contact Us</li>
                         </ol>
                     </nav>
-                    <h1 class="page-title" style="background-image: url(assets/images/shapes/heading-text.jpg);">Contact Us</h1>
+                    <h1 class="page-title" style="background-image: url('<%= asset_path("shapes/heading-text.jpg") %>');">Contact Us</h1>
                 </div>
             </div>
         </section>
@@ -76,7 +78,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="contact-info-item wow fadeInUp delay-0-2s">
                             <div class="icon">
-                                <img src="assets/images/icons/contact1.png" alt="Icon">
+                                <%= image_tag("icons/contact1.png", :alt => "Icon") %>  
                             </div>
                             <div class="content">
                                 <h5>Phone Number</h5>
@@ -88,7 +90,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="contact-info-item wow fadeInUp delay-0-4s">
                             <div class="icon">
-                                <img src="assets/images/icons/contact2.png" alt="Icon">
+                                <%= image_tag("icons/contact2.png", :alt => "Icon") %>  
                             </div>
                             <div class="content">
                                 <h5>Address line</h5>
@@ -99,7 +101,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="contact-info-item wow fadeInUp delay-0-6s">
                             <div class="icon">
-                                <img src="assets/images/icons/contact3.png" alt="Icon">
+                                <%= image_tag("icons/contact3.png", :alt => "Icon") %>  
                             </div>
                             <div class="content">
                                 <h5>Phone Number</h5>
