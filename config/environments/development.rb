@@ -1,4 +1,5 @@
 require "active_support/core_ext/integer/time"
+require "mailtrap"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -41,16 +42,29 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    :user_name => '531fda5ba7f9c8',
-    :password => '8a4031cea7f509',
-    :address => 'live.smtp.mailtrap.io',
-    :host => 'live.smtp.mailtrap.io',
-    :port => '587',
-    :authentication => :plain,
-    :enable_starttls_auto => true
-}
+  mail = Mailtrap::Mail::Base.new(
+    from:
+      {
+        email: "mailtrap@roncee.co.uk",
+        name: "Mailtrap Test",
+      },
+    to: [
+      {
+        email: "sduranowski1@gmail.com",
+      }
+    ],
+    subject: "You are awesome!",
+    text: "Congrats for sending test email with Mailtrap!",
+    category: "Integration Test"
+  )
+
+  client = Mailtrap::Sending::Client.new(
+    api_key: "940c8c183a0529fe7b00dd86661cd4ed",
+    api_host: "send.api.mailtrap.io",
+  )
+
+  response = client.send(mail)
+  puts response
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
