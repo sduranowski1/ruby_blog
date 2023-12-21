@@ -47,7 +47,7 @@ Rails.application.configure do
     :password => '8a4031cea7f509',
     :address => 'sandbox.smtp.mailtrap.io',
     :host => 'sandbox.smtp.mailtrap.io',
-    :port => '2525',
+    :port => '25',
     :authentication => :login
   }
 
