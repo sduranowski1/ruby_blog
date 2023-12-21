@@ -1,6 +1,6 @@
 class NotifierMailer < ApplicationMailer
     default to: "sduranowski1@gmail.com",
-      from: "contact@roncee.co.uk"
+      from: "mailtrap@roncee.co.uk"
   
     def simple_message(first_name, last_name, email, message)
       mail(
