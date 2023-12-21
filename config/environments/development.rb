@@ -44,7 +44,7 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :user_name => 'api',
-    :password => '5370df0378a8b033eb0ed91dc2fb7f41',
+    :password => '940c8c183a0529fe7b00dd86661cd4ed',
     :address => 'live.smtp.mailtrap.io',
     :host => 'live.smtp.mailtrap.io',
     :port => '587',
