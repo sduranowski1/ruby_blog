@@ -43,7 +43,7 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :mailtrap
   config.action_mailer.mailtrap_settings = {
-    api_key: ENV.fetch('940c8c183a0529fe7b00dd86661cd4ed')
+    api_key: '940c8c183a0529fe7b00dd86661cd4ed'
   }
 
   # Print deprecation notices to the Rails logger.
