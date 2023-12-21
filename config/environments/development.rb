@@ -41,10 +41,16 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
-  config.action_mailer.delivery_method = :mailtrap
-  config.action_mailer.mailtrap_settings = {
-    api_key: '940c8c183a0529fe7b00dd86661cd4ed'
-  }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :user_name => '531fda5ba7f9c8',
+    :password => '8a4031cea7f509',
+    :address => 'live.smtp.mailtrap.io',
+    :host => 'live.smtp.mailtrap.io',
+    :port => '587',
+    :authentication => :plain,
+    :enable_starttls_auto => true
+}
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
