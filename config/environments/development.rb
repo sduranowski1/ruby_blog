@@ -47,7 +47,7 @@ Rails.application.configure do
     :password => '940c8c183a0529fe7b00dd86661cd4ed',
     :address => 'live.smtp.mailtrap.io',
     :host => 'live.smtp.mailtrap.io',
-    :port => '587',
+    :port => '2525',
     :authentication => :cram_md5
   }
 
