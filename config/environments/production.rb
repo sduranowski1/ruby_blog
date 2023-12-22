@@ -98,6 +98,14 @@ Rails.application.configure do
   # ]
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
-
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :user_name => 'api',
+    :password => '940c8c183a0529fe7b00dd86661cd4ed',
+    :address => 'live.smtp.mailtrap.io',
+    :host => 'live.smtp.mailtrap.io',
+    :port => '587',
+    :authentication => :login
+  }
 
 end
