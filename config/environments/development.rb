@@ -42,29 +42,39 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
-  mail = Mailtrap::Mail::Base.new(
-    from:
-      {
-        email: "mailtrap@roncee.co.uk",
-        name: "Mailtrap Test",
-      },
-    to: [
-      {
-        email: "sduranowski1@gmail.com",
-      }
-    ],
-    subject: "You are awesome!",
-    text: "Congrats for sending test email with Mailtrap!",
-    category: "Integration Test"
-  )
+  # mail = Mailtrap::Mail::Base.new(
+  #   from:
+  #     {
+  #       email: "mailtrap@roncee.co.uk",
+  #       name: "Mailtrap Test",
+  #     },
+  #   to: [
+  #     {
+  #       email: "sduranowski1@gmail.com",
+  #     }
+  #   ],
+  #   subject: "You are awesome!",
+  #   text: "Congrats for sending test email with Mailtrap!",
+  #   category: "Integration Test"
+  # )
 
-  client = Mailtrap::Sending::Client.new(
-    api_key: "940c8c183a0529fe7b00dd86661cd4ed",
-    api_host: "send.api.mailtrap.io",
-  )
+  # client = Mailtrap::Sending::Client.new(
+  #   api_key: "940c8c183a0529fe7b00dd86661cd4ed",
+  #   api_host: "send.api.mailtrap.io",
+  # )
 
-  response = client.send(mail)
-  puts response
+  # response = client.send(mail)
+  # puts response
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :user_name => 'api',
+    :password => '940c8c183a0529fe7b00dd86661cd4ed',
+    :address => 'live.smtp.mailtrap.io',
+    :host => 'live.smtp.mailtrap.io',
+    :port => '587',
+    :authentication => :login
+  }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
