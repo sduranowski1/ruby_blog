@@ -1,0 +1,14 @@
+<!-- app/views/shared/_page_banner.html.erb -->
+<section class="page-banner-area pt-135 rpt-95 pb-110 rpb-70 rel z-1 bgs-cover text-center" style="background-image: url('<%= asset_path("background/banner-bg.png") %>');">
+    <div class="container">
+        <div class="banner-inner text-white wow fadeInUp delay-0-2s">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item active"><%= title %></li>
+                </ol>
+            </nav>
+            <h1 class="page-title" style="background-image: url('<%= asset_path("shapes/heading-text.jpg") %>');"><%= title %></h1>
+        </div>
+    </div>
+</section>

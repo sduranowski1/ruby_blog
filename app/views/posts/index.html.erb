@@ -1,19 +1,7 @@
 <p style="color: green"><%= notice %></p>
 
 <!-- Page Banner Start -->
-<section class="page-banner-area pt-135 rpt-95 pb-110 rpb-70 rel z-1 bgs-cover text-center" style="background-image: url('<%= asset_path("background/banner-bg.png") %>');">
-    <div class="container">
-        <div class="banner-inner text-white wow fadeInUp delay-0-2s">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb justify-content-center">
-                    <li class="breadcrumb-item"><a href="/">Home</a></li>
-                    <li class="breadcrumb-item active">blog page</li>
-                </ol>
-            </nav>
-            <h1 class="page-title" style="background-image: url('<%= asset_path("shapes/heading-text.jpg") %>');">blog</h1>
-        </div>
-    </div>
-</section>
+<%= render 'shared/page_banner', title: "Blog" %>
 <!-- Page Banner End -->
 
 
@@ -22,13 +10,11 @@
     <div class="container">
         <div class="row gap-50">
             <div class="col-lg-8">
-                
               <div id="posts">
                 <% @posts.each do |post| %>
                   <%= render post %>
                 <% end %>
               </div>
-               
               <ul class="pagination flex-wrap justify-content-center wow fadeInUp delay-0-2s">
                 <%= paginate @posts %>
               </ul>
@@ -105,42 +91,10 @@
 </div>
 <!-- Blog Page Two Area end -->
 
-  
 <!-- Lets Talk Area start -->
-<div class="lets-talk-area text-center pt-120 rpt-90 pb-75 rpb-100">
-    <div class="container">
-        <a href="/contact_form" class="lets-talk-text wow zoomIn delay-0-2s">Let’s Talk <i class="fal fa-arrow-right"></i></a>
-    </div>
-</div>
+<%= render 'shared/lets_talk' %>
 <!-- Lets Talk Area end -->
    
-
 <!-- Headline area start -->
-<div class="headline-area bgc-primary py-20">
-    <div class="headline-wrap style-two color-black">
-        <span class="marquee-wrap">
-           <span class="marquee-inner left">
-                <span class="marquee-item"><b>customer business solution</b><i class="fas fa-bahai"></i></span>
-                <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
-                <span class="marquee-item"><b>web development based company</b><i class="fas fa-bahai"></i></span>
-                <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
-                <span class="marquee-item"><b>marketing based devlopment</b><i class="fas fa-bahai"></i></span>
-           </span>
-           <span class="marquee-inner left">
-                <span class="marquee-item"><b>customer business solution</b><i class="fas fa-bahai"></i></span>
-                <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
-                <span class="marquee-item"><b>web development based company</b><i class="fas fa-bahai"></i></span>
-                <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
-                <span class="marquee-item"><b>marketing based devlopment</b><i class="fas fa-bahai"></i></span>
-           </span>
-           <span class="marquee-inner left">
-                <span class="marquee-item"><b>customer business solution</b><i class="fas fa-bahai"></i></span>
-                <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
-                <span class="marquee-item"><b>web development based company</b><i class="fas fa-bahai"></i></span>
-                <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
-                <span class="marquee-item"><b>marketing based devlopment</b><i class="fas fa-bahai"></i></span>
-           </span>
-        </span>
-     </div>
-</div>
+<%= render 'shared/green_headline' %>
 <!-- Headline Area end -->

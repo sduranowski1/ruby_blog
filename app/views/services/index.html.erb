@@ -1,276 +1,130 @@
 <!--Form Back Drop-->
-        <div class="form-back-drop"></div>
-        
-        <!-- Page Banner Start -->
-        <section class="page-banner-area pt-135 rpt-95 pb-110 rpb-70 rel z-1 bgs-cover text-center" style="background-image: url('<%= asset_path("background/banner-bg.png") %>');">
-            <div class="container">
-                <div class="banner-inner text-white wow fadeInUp delay-0-2s">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a href="/">Home</a></li>
-                            <li class="breadcrumb-item active">digital services</li>
-                        </ol>
-                    </nav>
-                    <h1 class="page-title" style="background-image: url('<%= asset_path("shapes/heading-text.jpg") %>');">service</h1>
-                </div>
-            </div>
-        </section>
-        <!-- Page Banner End -->
-        
-        
-        <!-- About Two Area start -->
-        <section id="about" class="about-two-area pt-135 pb-85 rpt-100 rpb-50 rel z-1">
-            <div class="container">
-                <div class="row gap-110 align-items-center">
-                    <div class="col-xl-6 wow fadeInRight delay-0-2s">
-                        <div class="about-three-images mb-50">
-                            <div class="experience-corner">
-                                <%= image_tag("shapes/experience-corner.jpg", :alt => "Shape") %> 
-                            </div>
-                            <div class="image">
-                                <%= image_tag("about/about.webp", :alt => "About") %> 
-                            </div>
-                            <div class="experience-circle">
-                                <span>3</span>
-                                <p>Years of Experience</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 wow fadeInLeft delay-0-2s">
-                        <div class="about-two-content mb-50">
-                            <div class="section-title mb-30">
-                                <span class="sub-title mb-10">Trusted web development services</span>
-                                <h2>We Give You Digital Solutions for</h2>
-                            </div>
-                            <h5>Front End, Back End, Fullstack applications</h5>
-                            <p>no matter what size we can build any Web Mobile Application using either CMS or Web Frameworks</p>
-                            <div class="row pt-25">
-                                <div class="col-md-6">
-                                    <div class="service-item wow fadeInUp delay-0-2s">
-                                        <div class="content">
-                                            <h6><a href="/contact_form">WEBSITE DESIGN</a></h6>
-                                            <p>Design an website</p>
-                                        </div>
-                                        <a href="/contact_form" class="details-btn"><i class="fal fa-long-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="service-item wow fadeInUp delay-0-6s">
-                                        <div class="content">
-                                            <h6><a href="/contact_form">WEBSITE DEVELOPMENT</a></h6>
-                                            <p>Build a website</p>
-                                        </div>
-                                        <a href="/contact_form" class="details-btn"><i class="fal fa-long-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--
-                            <div class="author-name-btn">
-                                <%= image_tag("about/author.jpg", :alt => "Author") %> 
-                                <%= image_tag("about/signature-two.png", :alt => "Signature") %> 
-                                <a href="/portfolio" class="theme-btn style-two">More about us</a>
-                            </div>
-                            -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- About Two Area end -->
-        
-        
-        
-        <!-- Services Area start -->
-        <section class="services-area-five pt-135 rpt-100 pb-100 rpb-60 rel z-1">
-            <div class="container">
-                <div class="row pb-35 align-items-center justify-content-between">
-                    <div class="col-xl-5 col-lg-6 wow fadeInLeft delay-0-2s">
-                        <div class="section-title mb-20 rmb-35">
-                            <span class="sub-title mb-15">Trusted web design Service</span>
-                            <h2>modern & intuitive web <span>solutions</span></h2>
-                        </div>
-                    </div>
+<div class="form-back-drop"></div>
 
-                </div>
-                 <div class="row">
-                    <div class="col-xl-4 col-md-6">
-                        <div class="service-item-five wow fadeInUp delay-0-2s">
-                            <div class="image">
-                                <%= image_tag("services/wordpress-development-company.png", :alt => "Service") %> 
-                            </div>
-                            <div class="content">
-                                <h5><a href="/contact_form">WordPress CMS</a></h5>
-                                <a href="/contact_form" class="btn"><i class="far fa-long-arrow-right"></i></a>
-                            </div>
-                        </div>
+<!-- Page Banner Start -->
+<%= render 'shared/page_banner', title: "Digital Solutions" %>
+<!-- Page Banner End -->
+
+<!-- About Two Area start -->
+<section id="about" class="about-two-area pt-135 pb-85 rpt-100 rpb-50 rel z-1">
+    <div class="container">
+        <div class="row gap-110 align-items-center">
+            <div class="col-xl-6 wow fadeInRight delay-0-2s">
+                <div class="about-three-images mb-50">
+                    <div class="experience-corner">
+                        <%= image_tag("shapes/experience-corner.jpg", :alt => "Shape") %> 
                     </div>
-                    <div class="col-xl-4 col-md-6">
-                        <div class="service-item-five wow fadeInUp delay-0-4s">
-                            <div class="image">
-                                <%= image_tag("services/og_joomla.png", :alt => "Service") %> 
-                            </div>
-                            <div class="content">
-                                <h5><a href="/contact_form">Joomla! CMS</a></h5>
-                                <a href="/contact_form" class="btn"><i class="far fa-long-arrow-right"></i></a>
-                            </div>
-                        </div>
+                    <div class="image">
+                        <%= image_tag("about/about.webp", :alt => "About") %> 
                     </div>
-                    <div class="col-xl-4 col-md-6">
-                        <div class="service-item-five wow fadeInUp delay-0-6s">
-                            <div class="image">
-                                <%= image_tag("services/shopify-development.png", :alt => "Service") %> 
-                            </div>
-                            <div class="content">
-                                <h5><a href="/contact_form">Shopify CMS</a></h5>
-                                <a href="/contact_form" class="btn"><i class="far fa-long-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6">
-                        <div class="service-item-five wow fadeInUp delay-0-2s">
-                            <div class="image">
-                                <%= image_tag("services/Laravel-Development.png", :alt => "Service") %> 
-                            </div>
-                            <div class="content">
-                                <h5><a href="/contact_form">Laravel Framework</a></h5>
-                                <a href="/contact_form" class="btn"><i class="far fa-long-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6">
-                        <div class="service-item-five wow fadeInUp delay-0-4s">
-                            <div class="image">
-                                <%= image_tag("services/rorbanner1.png", :alt => "Service") %> 
-                            </div>
-                            <div class="content">
-                                <h5><a href="/contact_form">Ruby on Rails Framework</a></h5>
-                                <a href="/contact_form" class="btn"><i class="far fa-long-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6">
-                        <div class="service-item-five wow fadeInUp delay-0-6s">
-                            <div class="image">
-                                <%= image_tag("services/flutter_3.png", :alt => "Service") %> 
-                            </div>
-                            <div class="content">
-                                <h5><a href="/contact_form">Mobile Development</a></h5>
-                                <a href="/contact_form" class="btn"><i class="far fa-long-arrow-right"></i></a>
-                            </div>
-                        </div>
+                    <div class="experience-circle">
+                        <span>3</span>
+                        <p>Years of Experience</p>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Services Area end -->
-        
-        
-        <!-- Testimonials Area start -->
-        <section class="testimonials-area py-145 rpy-100 rel z-1">
-            <div class="container">
-                <div class="row gap-140 align-items-center">
-                    <div class="col-lg-5 wow fadeInRight delay-0-2s">
-                        <div class="testimonials-image rmb-55">
-                            <%= image_tag("testimonials/positive-feedback.jpg", :alt => "Testimonials") %> 
-                        </div>
+            <div class="col-xl-6 wow fadeInLeft delay-0-2s">
+                <div class="about-two-content mb-50">
+                    <div class="section-title mb-30">
+                        <span class="sub-title mb-10">Trusted web development services</span>
+                        <h2>We Give You Digital Solutions for</h2>
                     </div>
-                    <div class="col-lg-7 wow fadeInLeft delay-0-2s">
-                        <div class="testimonials-content">
-                            <div class="section-title mb-35">
-                                <span class="sub-title mb-15">know what our client’s says</span>
-                                <h2>made the biggest <span>players</span> happy</h2>
+                    <h5>Front End, Back End, Fullstack applications</h5>
+                    <p>no matter what size we can build any Web Mobile Application using either CMS or Web Frameworks</p>
+                    <div class="row pt-25">
+                        <div class="col-md-6">
+                            <div class="service-item wow fadeInUp delay-0-2s">
+                                <div class="content">
+                                    <h6><a href="/contact_form">WEBSITE DESIGN</a></h6>
+                                    <p>Design a website</p>
+                                </div>
+                                <a href="/contact_form" class="details-btn"><i class="fal fa-long-arrow-right"></i></a>
                             </div>
-                            <div class="testimonials-active">
-                                <div class="testimonial-item">
-                                    <div class="author-speech">
-                                        <p>creative agency, we believe in the power of imagination and innovation. We are constantly pushing the boundaries of what is possible, and strive to create work that is not only bea utiful and effective,but also meaningful and impactful.</p>
-                                    </div>
-                                    <div class="testimonial-footer">
-                                        <div class="testimonial-author">
-                                            <div class="author-image">
-                                                <%= image_tag("testimonials/originapps.png", :alt => "Author Image") %> 
-                                            </div>
-                                            <div class="author-info">
-                                                <h6>OriginApps</h6>
-                                                <span class="designation">Web Development</span>
-                                            </div>
-                                        </div>
-                                        <div class="ratting">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                    </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="service-item wow fadeInUp delay-0-6s">
+                                <div class="content">
+                                    <h6><a href="/contact_form">WEBSITE DEVELOPMENT</a></h6>
+                                    <p>Build a website</p>
                                 </div>
-                                <div class="testimonial-item">
-                                    <div class="author-speech">
-                                        <p>their team consist very passionate back end developers. They easily catch up with any serverside technologies</p>
-                                    </div>
-                                    <div class="testimonial-footer">
-                                        <div class="testimonial-author">
-                                            <div class="author-image">
-                                                <%= image_tag("testimonials/dj_extensions_logo.jpg", :alt => "Author Image") %> 
-                                            </div>
-                                            <div class="author-info">
-                                                <h6>DJ-Extensions</h6>
-                                                <span class="designation">Joomla! Develepoment</span>
-                                            </div>
-                                        </div>
-                                        <div class="ratting">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                    </div>
-                                </div>
+                                <a href="/contact_form" class="details-btn"><i class="fal fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
+                    <!--
+                    <div class="author-name-btn">
+                        <%= image_tag("about/author.jpg", :alt => "Author") %> 
+                        <%= image_tag("about/signature-two.png", :alt => "Signature") %> 
+                        <a href="/portfolio" class="theme-btn style-two">More about us</a>
+                    </div>
+                    -->
                 </div>
-            </div>
-        </section>
-        <!-- Testimonials Area end -->
-        
-          
-        <!-- Lets Talk Area start -->
-        <div class="lets-talk-area text-center pb-75 rpb-100">
-            <div class="container">
-                <a href="/contact_form" class="lets-talk-text wow zoomIn delay-0-2s">Let’s Talk <i class="fal fa-arrow-right"></i></a>
             </div>
         </div>
-        <!-- Lets Talk Area end -->
-           
+    </div>
+</section>
+<!-- About Two Area end -->
 
-        <!-- Headline area start -->
-        <div class="headline-area bgc-primary py-20">
-            <div class="headline-wrap style-two color-black">
-                <span class="marquee-wrap">
-                   <span class="marquee-inner left">
-                        <span class="marquee-item"><b>customer business solution</b><i class="fas fa-bahai"></i></span>
-                        <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
-                        <span class="marquee-item"><b>web development based company</b><i class="fas fa-bahai"></i></span>
-                        <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
-                        <span class="marquee-item"><b>marketing based devlopment</b><i class="fas fa-bahai"></i></span>
-                   </span>
-                   <span class="marquee-inner left">
-                        <span class="marquee-item"><b>customer business solution</b><i class="fas fa-bahai"></i></span>
-                        <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
-                        <span class="marquee-item"><b>web development based company</b><i class="fas fa-bahai"></i></span>
-                        <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
-                        <span class="marquee-item"><b>marketing based devlopment</b><i class="fas fa-bahai"></i></span>
-                   </span>
-                   <span class="marquee-inner left">
-                        <span class="marquee-item"><b>customer business solution</b><i class="fas fa-bahai"></i></span>
-                        <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
-                        <span class="marquee-item"><b>web development based company</b><i class="fas fa-bahai"></i></span>
-                        <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
-                        <span class="marquee-item"><b>marketing based devlopment</b><i class="fas fa-bahai"></i></span>
-                   </span>
-                </span>
-             </div>
+<!-- Services Area start -->
+<section class="services-area-five pt-135 rpt-100 pb-100 rpb-60 rel z-1">
+    <div class="container">
+        <div class="row pb-35 align-items-center justify-content-between">
+            <div class="col-xl-5 col-lg-6 wow fadeInLeft delay-0-2s">
+                <div class="section-title mb-20 rmb-35">
+                    <span class="sub-title mb-15">Trusted web design Service</span>
+                    <h2>modern & intuitive web <span>solutions</span></h2>
+                </div>
+            </div>
+
         </div>
-        <!-- Headline Area end -->
+            <div class="row">
+            <div class="col-xl-4 col-md-6">
+                <div class="service-item-five wow fadeInUp delay-0-2s">
+                    <div class="image">
+                        <%= image_tag("services/wordpress-development-company.png", :alt => "Service") %> 
+                    </div>
+                    <div class="content">
+                        <h5><a href="/contact_form">WordPress or Shopify</a></h5>
+                        <a href="/contact_form" class="btn"><i class="far fa-long-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+                <div class="service-item-five wow fadeInUp delay-0-6s">
+                    <div class="image">
+                        <%= image_tag("services/mobiledev.png", :alt => "Service") %> 
+                    </div>
+                    <div class="content">
+                        <h5><a href="/contact_form">Mobile Development</a></h5>
+                        <a href="/contact_form" class="btn"><i class="far fa-long-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+                <div class="service-item-five wow fadeInUp delay-0-2s">
+                    <div class="image">
+                        <%= image_tag("services/Laravel-Development.png", :alt => "Service") %> 
+                    </div>
+                    <div class="content">
+                        <h5><a href="/contact_form">Custom Code</a></h5>
+                        <a href="/contact_form" class="btn"><i class="far fa-long-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+<!-- Services Area end -->
+
+<!-- Testimonials Area start -->
+<%= render 'shared/testimonials' %>   
+<!-- Testimonials Area end -->
+
+<!-- Lets Talk Area start -->
+<%= render 'shared/lets_talk' %>
+<!-- Lets Talk Area end -->
+    
+<!-- Headline area start -->
+<%= render 'shared/green_headline' %>
+<!-- Headline Area end -->
