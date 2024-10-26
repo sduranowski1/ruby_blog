@@ -5251,8 +5251,8 @@ h6, .h6 {
     .portfolio-item-four .image img {
       width: 100%;
       border-radius: 20px; 
-      outline-color: #C4EF17;
-      outline-style: solid;
+      /* outline-color: #C4EF17;
+      outline-style: solid; */
       outline-width: thin;}
   .portfolio-item-four .content {
     padding: 0 5.5%; }
