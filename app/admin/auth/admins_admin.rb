@@ -6,8 +6,8 @@ Trestle.resource(:admins, model: Admin, scope: Auth) do
   end
 
   table do
-    column :avatar, header: false do |user|
-      avatar_for(user)
+    column :avatar, header: false do |admin|
+      avatar_for(admin)
     end
     column :email, link: true
     column :first_name
@@ -17,7 +17,7 @@ Trestle.resource(:admins, model: Admin, scope: Auth) do
     end
   end
 
-  form do |user|
+  form do |admin|
     text_field :email
 
     row do

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get "/portfolio", to: "portfolio#index"
   get "/services", to: "services#index"
   get "/contact_form", to: "contact_form#new"
+  get "/posts/:id", to: "posts#show"
   resources :contact_form, only: %i[new create]
   
   resources :posts

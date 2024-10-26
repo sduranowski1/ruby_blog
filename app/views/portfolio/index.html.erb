@@ -1,5 +1,7 @@
+<!--
 <h1>Portfolio#index</h1>
 <p>Find me in app/views/portfolio/index.html.erb</p>
+-->
 <!--Form Back Drop-->
         <div class="form-back-drop"></div>
         
@@ -42,7 +44,7 @@
         
         
         <!-- Page Banner Start -->
-        <section class="page-banner-area pt-135 rpt-95 pb-110 rpb-70 rel z-1 bgs-cover text-center" style="background-image: url(assets/images/background/banner-bg.png);">
+        <section class="page-banner-area pt-135 rpt-95 pb-110 rpb-70 rel z-1 bgs-cover text-center" style="background-image: url('<%= asset_path("background/banner-bg.png") %>');">
             <div class="container">
                 <div class="banner-inner text-white wow fadeInUp delay-0-2s">
                     <nav aria-label="breadcrumb">
@@ -51,58 +53,71 @@
                             <li class="breadcrumb-item active">Portfolio v.3</li>
                         </ol>
                     </nav>
-                    <h1 class="page-title" style="background-image: url(assets/images/shapes/heading-text.jpg);">Portfolio v.3</h1>
+                    <h1 class="page-title" style="background-image: url('<%= asset_path("shapes/heading-text.jpg") %>');">Portfolio</h1>
                 </div>
             </div>
         </section>
         <!-- Page Banner End -->
         
+        <section class="portfolio-page-three pt-140 rpt-100 pb-40 rpb-20 rel z-1">
+            <div class="container">
+                <div class="portfolio-item-four">
+
+                    <div class="content wow fadeInRight delay-0-2s">
+                        <h2>Hello Everyone</a></h2>
+                        <p>My name is Simon Duranowski, I am the owner, creator of Roncee but the most importantly I am a passionate web developer with a keen interest in creating engaging and user-friendly websites. I am dedicated to turning ideas into reality through clean, efficient code.</p>
+                        <p>Here, you can find four of my recent projects that I have built and customized. You can access my code project on GitHub as well by clicking the arrow right below</p>
+                        <a class="details-btn" href="https://www.github.com/sduranowski1"><i class="fal fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>    
         
         <!-- Portfolio Area start -->
         <section class="portfolio-page-three pt-140 rpt-100 pb-40 rpb-20 rel z-1">
             <div class="container">
                 <div class="portfolio-item-four">
-                    <div class="image wow fadeInLeft delay-0-2s">
-                        <img src="assets/images/portfolio/pp-two1.jpg" alt="Portfolio">
+                    <div class="image wow fadeInLeft delay-0-2s" id="purfect">
+                        <%= image_tag("portfolio/purfect_gifts.png", :alt => "Portfolio") %>    
                     </div>
                     <div class="content wow fadeInRight delay-0-2s">
-                        <span class="category">Marketing agency</span>
-                        <h2><a href="portfolio-details.html">Business Growth System</a></h2>
-                        <p>Ne summo dictas pertinacia nam. Illum cetero vocent ei vim, case lobortis. Duis aute irure dolor in reprehenderit in voluptate velit </p>
-                        <a class="details-btn" href="portfolio-details.html"><i class="fal fa-arrow-right"></i></a>
+                        <span class="category">ECOMMERCE</span>
+                        <h2><a href="https://www.purfectgifts.com">Gifts Store</a></h2>
+                        <p>A gift store built with Wordpress Woo Commerce using Astra theme. The payment gateway system is powered by Stripe </p>
+                        <a class="details-btn" href="https://www.purfectgifts.com"><i class="fal fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="portfolio-item-four">
                     <div class="content wow fadeInRight delay-0-2s">
-                        <span class="category">Marketing agency</span>
-                        <h2><a href="portfolio-details.html">Business Growth System</a></h2>
-                        <p>Ne summo dictas pertinacia nam. Illum cetero vocent ei vim, case lobortis. Duis aute irure dolor in reprehenderit in voluptate velit </p>
-                        <a class="details-btn" href="portfolio-details.html"><i class="fal fa-arrow-right"></i></a>
+                        <span class="category">Marketing</span>
+                        <h2><a href="https://www.asymarketingu.pl">Marketing Landing Page</a></h2>
+                        <p>An HTML landing page integrated withn Wordpress environment. The site includes a questionaire based on WP Forms</p>
+                        <a class="details-btn" href="https://www.asymarketingu.pl"><i class="fal fa-arrow-right"></i></a>
                     </div>
                     <div class="image wow fadeInLeft delay-0-2s">
-                        <img src="assets/images/portfolio/pp-two2.jpg" alt="Portfolio">
+                        <%= image_tag("portfolio/marekting_site.png", :alt => "Portfolio") %>    
                     </div>
                 </div>
                 <div class="portfolio-item-four">
                     <div class="image wow fadeInLeft delay-0-2s">
-                        <img src="assets/images/portfolio/pp-two3.jpg" alt="Portfolio">
+                        <%= image_tag("portfolio/dog_saloon.png", :alt => "Portfolio") %>    
                     </div>
                     <div class="content wow fadeInRight delay-0-2s">
-                        <span class="category">Marketing agency</span>
-                        <h2><a href="portfolio-details.html">Business Growth System</a></h2>
-                        <p>Ne summo dictas pertinacia nam. Illum cetero vocent ei vim, case lobortis. Duis aute irure dolor in reprehenderit in voluptate velit </p>
-                        <a class="details-btn" href="portfolio-details.html"><i class="fal fa-arrow-right"></i></a>
+                        <span class="category">DOG GROOMING</span>
+                        <h2><a href="https://www.thedogsaloon.com">The Dog Saloon</a></h2>
+                        <p>A dog grooming website also built with Wordpress using Avada theme this time</p>
+                        <a class="details-btn" href="https://www.thedogsaloon.com"><i class="fal fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="portfolio-item-four">
                     <div class="content wow fadeInRight delay-0-2s">
-                        <span class="category">Marketing agency</span>
-                        <h2><a href="portfolio-details.html">Business Growth System</a></h2>
-                        <p>Ne summo dictas pertinacia nam. Illum cetero vocent ei vim, case lobortis. Duis aute irure dolor in reprehenderit in voluptate velit </p>
-                        <a class="details-btn" href="portfolio-details.html"><i class="fal fa-arrow-right"></i></a>
+                        <span class="category">DATING</span>
+                        <h2><a href="https://www.4playdate.com">Adult Dating Site (NSFW)</a></h2>
+                        <p>A hook up dating website built using Laravel. The site alllows users to create accounts, interact with users or pay for tokens that could be exchanged for many different products eg Premium Plans. </p>
+                        <a class="details-btn" href="https://www.4playdate.com"><i class="fal fa-arrow-right"></i></a>
                     </div>
                     <div class="image wow fadeInLeft delay-0-2s">
-                        <img src="assets/images/portfolio/pp-two4.jpg" alt="Portfolio">
+                        <%= image_tag("portfolio/adult_site.png", :alt => "Portfolio") %>    
                     </div>
                 </div>
             </div>
@@ -113,7 +128,7 @@
         <!-- Lets Talk Area start -->
         <div class="lets-talk-area text-center pb-75 rpb-100">
             <div class="container">
-                <a href="contact.html" class="lets-talk-text wow zoomIn delay-0-2s">Let’s Talk <i class="fal fa-arrow-right"></i></a>
+                <a href="contact_form" class="lets-talk-text wow zoomIn delay-0-2s">Let’s Talk <i class="fal fa-arrow-right"></i></a>
             </div>
         </div>
         <!-- Lets Talk Area end -->

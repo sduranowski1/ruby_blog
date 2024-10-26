@@ -1,0 +1,17 @@
+<div class="blog-item wow fadeInUp delay-0-2s">
+    <div class="content">
+        <ul class="blog-meta">
+            <li>
+                <a href="/posts/<%= post.id %>"><%= post.created_at.strftime("%B %d, %Y, %I:%M %p") %></a>
+            </li>
+            <li>
+                <!-- <a href="/posts">Comments (03)</a> -->
+            </li>
+        </ul>
+        <h4><a href="/posts/<%= post.id %>"><%= post.title %></a></h4>
+    </div>
+    <div class="image">
+        <!-- <%= image_tag("blog/blog1.jpg", :alt => "Blog") %> -->
+    </div>
+    <a class="read-more" href="/posts/<%= post.id %>"><i class="fal fa-arrow-up"></i> View blog details</a>
+</div>

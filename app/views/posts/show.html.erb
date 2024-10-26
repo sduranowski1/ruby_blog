@@ -1,10 +1,56 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @post %>
+<div class="blog-standard-item wow fadeInUp delay-0-2s" id="<%= dom_id @post %>">
+  <div class="image container">
+      <a href="#" class="category">Business</a>
+      <div class="p-5">
+      <% if @post.image.attached? %>  <!-- Use `post` if that's what you're passing -->
+        <%= image_tag @post.image %>
+      <% else %>
+        <span>No image</span>
+      <% end %>
+      </div>
+  </div>
+  <div class="content container">
+      <ul class="blog-meta">
+          <li><i class="fal fa-user"></i> <a href="/posts">admin</a></li>
+          <li><i class="fal fa-comments"></i> <a href="/posts">Coments (0)</a></li>
+          <li><i class="fal fa-clock"></i> <a href="/posts">1 min Read</a></li>
+      </ul>
+        <h4><%= @post.title %></h4>
+        <p><%= @post.content %></p>
+        <%= link_to "Back to posts", posts_path %>
+        <div id="disqus_thread"></div>
+  </div>
+
+</div>
 
 <div>
+  <!--
   <%= link_to "Edit this post", edit_post_path(@post) %> |
   <%= link_to "Back to posts", posts_path %>
+  -->
 
+  <!--
   <%= button_to "Destroy this post", @post, method: :delete %>
+  -->
 </div>
+
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://roncee.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>

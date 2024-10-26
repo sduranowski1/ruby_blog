@@ -1,3 +1,4 @@
+<!--
 <div id="<%= dom_id post %>">
   <p>
     <strong>Title:</strong>
@@ -9,4 +10,26 @@
     <%= post.content %>
   </p>
 
+</div>
+-->
+
+<div class="blog-standard-item wow fadeInUp delay-0-2s" id="<%= dom_id post %>">
+  <div class="image">
+      <a href="#" class="category">Business</a>
+      <% if post.image.attached? %>  <!-- Use `post` if that's what you're passing -->
+        <%= image_tag post.image %>
+      <% else %>
+        <span>No image</span>
+      <% end %>
+  </div>
+  <div class="content">
+      <ul class="blog-meta">
+          <li><i class="fal fa-user"></i> <a href="/posts">admin</a></li>
+          <!-- <li><i class="fal fa-comments"></i> <a href="/posts">Coments (0)</a></li>
+          <li><i class="fal fa-clock"></i> <a href="/posts">1 min Read</a></li> -->
+      </ul>
+      <h4><a href="/posts/<%= post.id %>"><%= post.title %></a></h4>
+      <p><%= truncate(post.content, length: 100, separator: ' ') %></p>
+      <a class="read-more"><%= link_to "Read More", post %><i class="far fa-long-arrow-right"></i></a>
+  </div>
 </div>

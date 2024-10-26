@@ -1,14 +1,152 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Posts</h1>
+<!-- <h1>Posts</h1> -->
 
-<div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
-  <% end %>
+
+
+<!-- <%= link_to "New post", new_post_path %> -->
+
+<!-- Page Banner Start -->
+<section class="page-banner-area pt-135 rpt-95 pb-110 rpb-70 rel z-1 bgs-cover text-center" style="background-image: url('<%= asset_path("background/banner-bg.png") %>');">
+    <div class="container">
+        <div class="banner-inner text-white wow fadeInUp delay-0-2s">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">blog page</li>
+                </ol>
+            </nav>
+            <h1 class="page-title" style="background-image: url('<%= asset_path("shapes/heading-text.jpg") %>');">blog</h1>
+        </div>
+    </div>
+</section>
+<!-- Page Banner End -->
+
+
+<!-- Blog Page Two Area start -->
+<div class="blog-page-two pt-100 rpt-70">
+    <div class="container">
+        <div class="row gap-50">
+            <div class="col-lg-8">
+                
+              <div id="posts">
+                <% @posts.each do |post| %>
+                  <%= render post %>
+                <% end %>
+              </div>
+               
+              <ul class="pagination flex-wrap justify-content-center wow fadeInUp delay-0-2s">
+                <%= paginate @posts %>
+              </ul>
+            </div>
+            <div class="col-lg-4 col-md-7 col-sm-9">
+                <div class="main-sidebar rmt-65">
+                    <div class="widget widget-search wow fadeInUp delay-0-2s">
+                        <h5 class="widget-title">search here</h5>
+                        <form action="#" class="default-search-form">
+                            <input type="text" placeholder="search here..." required>
+                            <button type="submit" class="searchbutton far fa-search"></button>
+                        </form>
+                    </div>
+                    <!--
+                    <div class="widget widget-recent-news wow fadeInUp delay-0-2s">
+                        <h5 class="widget-title">Recent Blog</h5>
+                        <ul>
+                            <li>
+                                <div class="image">
+                                    <%= image_tag("widgets/blog1.jpg", :alt => "Blog") %> 
+                                </div>
+                                <div class="content">
+                                    <a class="date" href="/posts"><i class="far fa-calendar-alt"></i> Jun 23,2023</a>
+                                    <h6><a href="blog-details.html">Budget Issues Force The Our To Become</a></h6>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="image">
+                                    <%= image_tag("widgets/blog2.jpg", :alt => "Blog") %> 
+                                </div>
+                                <div class="content">
+                                    <a class="date" href="/posts"><i class="far fa-calendar-alt"></i> Jun 23,2023</a>
+                                    <h6><a href="blog-details.html">The Best Products That Shape Fashion</a></h6>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="image">
+                                    <%= image_tag("widgets/blog3.jpg", :alt => "Blog") %> 
+                                </div>
+                                <div class="content">
+                                    <a class="date" href="/posts"><i class="far fa-calendar-alt"></i> Jun 23,2023</a>
+                                    <h6><a href="blog-details.html">Budget Issues Force The Our To Become</a></h6>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    -->
+                    <div class="widget widget-category wow fadeInUp delay-0-4s">
+                        <h5 class="widget-title">Catagories</h5>
+                        <ul>
+                            <li><a href="/posts">Graphic Design <span>03</span></a></li>
+                            <li><a href="/posts">Web Development <span>03</span></a></li>
+                            <li><a href="/posts">Digital Marketing <span>03</span></a></li>
+                            <li><a href="/posts">UI/UX Development <span>03</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="widget widget-tag-cloud wow fadeInUp delay-0-2s">
+                        <h5 class="widget-title">Popular Tags</h5>
+                        <div class="tag-coulds">
+                            <a href="/posts">Design</a>
+                            <a href="/posts">marketing</a>
+                            <a href="/posts">search</a>
+                            <a href="/posts">branding</a>
+                            <a href="/posts">startup</a>
+                            <a href="/posts">tech</a>
+                            <a href="/posts">landing</a>
+                            <a href="/posts">coding</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<!-- Blog Page Two Area end -->
 
-<%= link_to "New post", new_post_path %>
+  
+<!-- Lets Talk Area start -->
+<div class="lets-talk-area text-center pt-120 rpt-90 pb-75 rpb-100">
+    <div class="container">
+        <a href="contact.html" class="lets-talk-text wow zoomIn delay-0-2s">Let’s Talk <i class="fal fa-arrow-right"></i></a>
+    </div>
+</div>
+<!-- Lets Talk Area end -->
+   
+
+<!-- Headline area start -->
+<div class="headline-area bgc-primary py-20">
+    <div class="headline-wrap style-two color-black">
+        <span class="marquee-wrap">
+           <span class="marquee-inner left">
+                <span class="marquee-item"><b>customer business solution</b><i class="fas fa-bahai"></i></span>
+                <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
+                <span class="marquee-item"><b>web development based company</b><i class="fas fa-bahai"></i></span>
+                <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
+                <span class="marquee-item"><b>marketing based devlopment</b><i class="fas fa-bahai"></i></span>
+           </span>
+           <span class="marquee-inner left">
+                <span class="marquee-item"><b>customer business solution</b><i class="fas fa-bahai"></i></span>
+                <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
+                <span class="marquee-item"><b>web development based company</b><i class="fas fa-bahai"></i></span>
+                <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
+                <span class="marquee-item"><b>marketing based devlopment</b><i class="fas fa-bahai"></i></span>
+           </span>
+           <span class="marquee-inner left">
+                <span class="marquee-item"><b>customer business solution</b><i class="fas fa-bahai"></i></span>
+                <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
+                <span class="marquee-item"><b>web development based company</b><i class="fas fa-bahai"></i></span>
+                <span class="marquee-item"><b><span>design</span> - customer centric solution</b><i class="fas fa-bahai"></i></span>
+                <span class="marquee-item"><b>marketing based devlopment</b><i class="fas fa-bahai"></i></span>
+           </span>
+        </span>
+     </div>
+</div>
+<!-- Headline Area end -->

@@ -1,5 +1,7 @@
+<!--
 <h1>Contact#index</h1>
 <p>Find me in app/views/contact/index.html.erb</p>
+-->
 <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>">
       <%= value %>
@@ -53,7 +55,7 @@
         
         
         <!-- Page Banner Start -->
-        <section class="page-banner-area pt-135 rpt-95 pb-110 rpb-70 rel z-1 bgs-cover text-center" style="background-image: url(assets/images/background/banner-bg.png);">
+        <section class="page-banner-area pt-135 rpt-95 pb-110 rpb-70 rel z-1 bgs-cover text-center" style="background-image: url('<%= asset_path("background/banner-bg.png") %>');">
             <div class="container">
                 <div class="banner-inner text-white wow fadeInUp delay-0-2s">
                     <nav aria-label="breadcrumb">
@@ -62,7 +64,7 @@
                             <li class="breadcrumb-item active">Contact Us</li>
                         </ol>
                     </nav>
-                    <h1 class="page-title" style="background-image: url(assets/images/shapes/heading-text.jpg);">Contact Us</h1>
+                    <h1 class="page-title" style="background-image: url('<%= asset_path("shapes/heading-text.jpg") %>');">Contact Us</h1>
                 </div>
             </div>
         </section>
@@ -76,34 +78,33 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="contact-info-item wow fadeInUp delay-0-2s">
                             <div class="icon">
-                                <img src="assets/images/icons/contact1.png" alt="Icon">
+                                <%= image_tag("icons/contact1.png", :alt => "Icon") %>  
                             </div>
                             <div class="content">
                                 <h5>Phone Number</h5>
-                                <a href="callto:+12555686523">+1255 - 568 - 6523</a><br>
-                                <a href="callto:+12555686523">+1255 - 568 - 6523</a>
+                                <a href="callto:+447548339251">+44 7548 339 251</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="contact-info-item wow fadeInUp delay-0-4s">
                             <div class="icon">
-                                <img src="assets/images/icons/contact2.png" alt="Icon">
+                                <%= image_tag("icons/contact2.png", :alt => "Icon") %>  
                             </div>
                             <div class="content">
                                 <h5>Address line</h5>
-                                <span>Bowery St, New York, NY<br> 10013,USA</span>
+                                <span>Westbourne Road, Bedford, Bedfordshire<br> MK40 4LD,UK</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="contact-info-item wow fadeInUp delay-0-6s">
                             <div class="icon">
-                                <img src="assets/images/icons/contact3.png" alt="Icon">
+                                <%= image_tag("icons/contact3.png", :alt => "Icon") %>  
                             </div>
                             <div class="content">
-                                <h5>Phone Number</h5>
-                                <span>Moday - Friday<br> 09:00 AM - 05:00 PM</span>
+                                <h5>Office Hours</h5>
+                                <span>Always Open</span>
                             </div>
                         </div>
                     </div>
@@ -159,7 +160,7 @@
         <!-- Location Map Area Start -->
         <div class="contact-page-map wow fadeInUp delay-0-2s">
             <div class="our-location">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m10!1m3!1d142190.2862584524!2d-74.01298319978558!3d40.721725351435126!2m1!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sbd!4v1663473911885!5m2!1sen!2sbd" style="border:0; width: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=bedford+(My%20Business%20Name)&amp;t=h&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" style="border:0; width: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
         <!-- Location Map Area End -->
