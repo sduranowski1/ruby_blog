@@ -8,6 +8,15 @@
     <%= favicon_link_tag asset_path('logos/rfavicon.png') %>
     <%= stylesheet_link_tag "styles", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PVGBXQBE7V"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-PVGBXQBE7V');
+    </script>
   </head>
 
   <body>
