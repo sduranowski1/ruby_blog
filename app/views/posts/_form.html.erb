@@ -22,6 +22,12 @@
   </div>
 
   <div>
+    <%= form.label :tag_ids, "Tags" %>
+    <%= form.collection_check_boxes(:tag_ids, Tag.all, :id, :name) %>
+
+  </div>
+
+  <div>
     <%= form.label :image %>
     <%= form.file_field :image %> <!-- File field for image upload -->
   </div>

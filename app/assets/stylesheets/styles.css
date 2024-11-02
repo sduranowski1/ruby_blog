@@ -7981,6 +7981,30 @@ blockquote {
       color: black;
       background: var(--primary-color); }
 
+.category-coulds {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 5px;
+  margin: -14px -7px 0; }
+  .category-coulds a {
+    color: black;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 4px;
+    padding: 3px 22px;
+    margin: 14px 7px 0;
+    letter-spacing: 1.89px;
+    text-transform: uppercase;
+    background: var(--primary-color);
+    }
+    .category-coulds a:hover {
+      color: black;
+      background: var(--primary-color); }
+
 .widget-category-two ul {
   padding-left: 20px; }
   .widget-category-two ul li {
@@ -8459,3 +8483,7 @@ h6.footer-title {
       line-height: 42px; }
       .footer-social .social-style-one a:not(:hover) {
         color: var(--base-color); }
+
+.category-margin {
+    margin-left: 15%
+}

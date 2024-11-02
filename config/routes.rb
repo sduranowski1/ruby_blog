@@ -10,7 +10,12 @@ Rails.application.routes.draw do
   get "/posts/:id", to: "posts#show"
   resources :contact_form, only: %i[new create]
   
-  resources :posts
+  resources :posts do
+    collection do
+      get 'filter_by_tag/:id', to: 'posts#filter_by_tag', as: :filter_by_tag
+      get 'filter_by_category/:id', to: 'posts#filter_by_category', as: :filter_by_category
+    end
+  end
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

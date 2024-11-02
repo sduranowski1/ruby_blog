@@ -1,6 +1,10 @@
 <div class="blog-standard-item wow fadeInUp delay-0-2s" id="<%= dom_id post %>">
   <div class="image">
-      <a href="#" class="category">Business</a>
+    <div class="category-coulds">
+      <% post.categories.each do |category| %> <!-- Use post.tags to get tags associated with the current post -->
+        <%= link_to category.name, posts_path(category_id: category.id, query: params[:query], page: 1) %>
+      <% end %>
+    </div>
       <% if post.image.attached? %>  <!-- Use `post` if that's what you're passing -->
         <%= image_tag post.image %>
       <% else %>
@@ -14,7 +18,18 @@
           <li><i class="fal fa-clock"></i> <a href="/posts">1 min Read</a></li> -->
       </ul>
       <h4><a href="/posts/<%= post.id %>"><%= post.title %></a></h4>
-      <p><%= truncate(post.content, length: 100, separator: ' ') %></p>
+      <p><%= truncate(strip_tags(post.content), length: 100, separator: ' ') %></p>
+      <% if post.tags.any? %> <!-- Check if the post has any tags -->
+        <h6>Tags: </h6>
+        <div class="tag-coulds">
+            <br/>
+            <% post.tags.each do |tag| %> <!-- Use post.tags to get tags associated with the current post -->
+              <%= link_to tag.name, posts_path(tag_id: tag.id, query: params[:query], page: 1) %>
+            <% end %>
+        </div>
+      <% end %>
+
+      <br/>
       <a class="read-more"><%= link_to "Read More", post %><i class="far fa-long-arrow-right"></i></a>
   </div>
 </div>

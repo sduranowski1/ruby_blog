@@ -4,7 +4,6 @@
 <%= render 'shared/page_banner', title: "Blog" %>
 <!-- Page Banner End -->
 
-
 <!-- Blog Page Two Area start -->
 <div class="blog-page-two pt-100 rpt-70">
     <div class="container">
@@ -23,65 +22,25 @@
                 <div class="main-sidebar rmt-65">
                     <div class="widget widget-search wow fadeInUp delay-0-2s">
                         <h5 class="widget-title">search here</h5>
-                        <form action="#" class="default-search-form">
-                            <input type="text" placeholder="search here..." required>
+                        <form action="<%= request.path %>" method="get" class="default-search-form">
+                            <input type="text" name="query" placeholder="Search by title or content..." value="<%= params[:query] %>">
                             <button type="submit" class="searchbutton far fa-search"></button>
-                        </form>
+                      </form>
                     </div>
-                    <!--
-                    <div class="widget widget-recent-news wow fadeInUp delay-0-2s">
-                        <h5 class="widget-title">Recent Blog</h5>
-                        <ul>
-                            <li>
-                                <div class="image">
-                                    <%= image_tag("widgets/blog1.jpg", :alt => "Blog") %> 
-                                </div>
-                                <div class="content">
-                                    <a class="date" href="/posts"><i class="far fa-calendar-alt"></i> Jun 23,2023</a>
-                                    <h6><a href="blog-details.html">Budget Issues Force The Our To Become</a></h6>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="image">
-                                    <%= image_tag("widgets/blog2.jpg", :alt => "Blog") %> 
-                                </div>
-                                <div class="content">
-                                    <a class="date" href="/posts"><i class="far fa-calendar-alt"></i> Jun 23,2023</a>
-                                    <h6><a href="blog-details.html">The Best Products That Shape Fashion</a></h6>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="image">
-                                    <%= image_tag("widgets/blog3.jpg", :alt => "Blog") %> 
-                                </div>
-                                <div class="content">
-                                    <a class="date" href="/posts"><i class="far fa-calendar-alt"></i> Jun 23,2023</a>
-                                    <h6><a href="blog-details.html">Budget Issues Force The Our To Become</a></h6>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    -->
                     <div class="widget widget-category wow fadeInUp delay-0-4s">
                         <h5 class="widget-title">Catagories</h5>
                         <ul>
-                            <li><a href="/posts">Graphic Design <span>03</span></a></li>
-                            <li><a href="/posts">Web Development <span>03</span></a></li>
-                            <li><a href="/posts">Digital Marketing <span>03</span></a></li>
-                            <li><a href="/posts">UI/UX Development <span>03</span></a></li>
+                        <% @categories.each do |category| %>
+                            <li><%= link_to "#{category.name} (#{category.post_count || 0})".html_safe, posts_path(category_id: category.id, query: params[:query], page: 1) %></lis> <!-- Display the post count -->
+                        <% end %>
                         </ul>
                     </div>
                     <div class="widget widget-tag-cloud wow fadeInUp delay-0-2s">
                         <h5 class="widget-title">Popular Tags</h5>
                         <div class="tag-coulds">
-                            <a href="/posts">Design</a>
-                            <a href="/posts">marketing</a>
-                            <a href="/posts">search</a>
-                            <a href="/posts">branding</a>
-                            <a href="/posts">startup</a>
-                            <a href="/posts">tech</a>
-                            <a href="/posts">landing</a>
-                            <a href="/posts">coding</a>
+                            <% @tags.each do |tag| %>
+                                <%= link_to tag.name, posts_path(tag_id: tag.id, query: params[:query], page: 1) %>
+                            <% end %>
                         </div>
                     </div>
                 </div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_10_25_174113) do
+ActiveRecord::Schema[7.1].define(version: 2024_11_02_162614) do
   create_table "active_storage_attachments", charset: "latin1", collation: "latin1_swedish_ci", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -46,6 +46,29 @@ ActiveRecord::Schema[7.1].define(version: 2024_10_25_174113) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "categories", charset: "latin1", collation: "latin1_swedish_ci", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "post_categories", charset: "latin1", collation: "latin1_swedish_ci", force: :cascade do |t|
+    t.bigint "post_id", null: false
+    t.bigint "category_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_post_categories_on_category_id"
+    t.index ["post_id"], name: "index_post_categories_on_post_id"
+  end
+
+  create_table "post_tags", charset: "latin1", collation: "latin1_swedish_ci", force: :cascade do |t|
+    t.bigint "post_id", null: false
+    t.bigint "tag_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "fk_rails_fdf74b486b"
+  end
+
   create_table "posts", charset: "utf8", collation: "utf8_general_ci", force: :cascade do |t|
     t.string "title"
     t.text "content"
@@ -53,7 +76,13 @@ ActiveRecord::Schema[7.1].define(version: 2024_10_25_174113) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", charset: "utf8", collation: "utf8_general_ci", force: :cascade do |t|
+  create_table "tags", charset: "latin1", collation: "latin1_swedish_ci", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", precision: nil, default: -> { "current_timestamp()" }
+    t.datetime "updated_at", precision: nil, default: -> { "current_timestamp() ON UPDATE current_timestamp()" }
+  end
+
+  create_table "users", charset: "latin1", collation: "latin1_swedish_ci", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
     t.string "first_name"
@@ -66,4 +95,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_10_25_174113) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "post_categories", "categories"
+  add_foreign_key "post_categories", "posts"
+  add_foreign_key "post_tags", "posts"
 end
